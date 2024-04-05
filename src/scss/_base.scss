@@ -1,0 +1,49 @@
+@charset "utf-8";
+//main
+$a: #000;
+$b: #D9D9D9; 
+$c: #fff;
+$d: #6D6D6D;
+
+@mixin font-style {
+    font-family: 'Grotta-Trial-Bold';
+    color: $a;
+}
+
+@mixin font-style-white {
+    font-family: 'Grotta-Trial-Bold';
+    color: $c;
+}
+
+@mixin item_c {
+    font-family: 'Grotta-Trial-Medium';
+    color: $d;
+}
+
+@mixin item_p {
+    font-weight: 700;
+    color: $a;
+}
+
+@mixin background-set {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin flex-mid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin box_border($w, $color) {
+    border: $w solid $color;
+}
+

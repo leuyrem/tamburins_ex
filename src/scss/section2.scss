@@ -1,0 +1,69 @@
+@charset "utf-8";
+@import "fonts", "base";
+
+//tab_menu
+.mid_section {
+    width: 100%;
+    height: auto;
+}
+
+.Wrap {
+    padding: 0 100px;
+}
+
+.tab {
+    @include flex-between;
+
+    .tab_txt {
+        @include font-style;
+        font-size: 30px;
+        line-height: 35px;
+        margin-top: 20px
+    }
+
+    Button {
+        @include box_border(2px, $a);
+        border-radius: 50px;
+        margin-left: 10px;
+        @include font-style;
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+
+}
+
+.menu_list {
+    height: auto;
+    overflow: hidden;
+
+    .itemWrap {
+        padding: 20px 0;
+
+        .item {
+            text-align: center;
+             margin-bottom: 30px;
+
+            img {
+                border-radius: 40px;
+                height: 600px;
+            }
+
+            h4 {
+                @include font-style;
+                margin-top: 30px;
+            }
+
+            .item_c {
+                @include item_c;
+                margin-top: 10px;
+                font-size: 1rem
+            }
+
+            .item_p {
+                @include item_p;
+                margin-top: 10px;
+            }
+        }
+    }
+}

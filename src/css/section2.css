@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@font-face {
+  font-family: "NeueMetana-Bold";
+  src: url(../../public/fonts/NeueMetana-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "NeueMetana-Regular";
+  src: url(../../public/fonts/NeueMetana-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "Grotta-Trial-Semibold";
+  src: url(../..//public/fonts/Grotta-Trial-Semibold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Grotta-Trial-Bold";
+  src: url(../..//public/fonts/Grotta-Trial-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Grotta-Trial-Medium";
+  src: url(../..//public/fonts/Grotta-Trial-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: "Grotta-Trial-Regular";
+  src: url(../..//public/fonts/Grotta-Trial-Regular.otf) format("opentype");
+}
+.mid_section {
+  width: 100%;
+  height: auto;
+}
+
+.Wrap {
+  padding: 0 100px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tab .tab_txt {
+  font-family: "Grotta-Trial-Bold";
+  color: #000;
+  font-size: 30px;
+  line-height: 35px;
+  margin-top: 20px;
+}
+.tab Button {
+  border: 2px solid #000;
+  border-radius: 50px;
+  margin-left: 10px;
+  font-family: "Grotta-Trial-Bold";
+  color: #000;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 20px;
+}
+
+.menu_list {
+  height: auto;
+  overflow: hidden;
+}
+.menu_list .itemWrap {
+  padding: 20px 0;
+}
+.menu_list .itemWrap .item {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.menu_list .itemWrap .item img {
+  border-radius: 40px;
+  height: 600px;
+}
+.menu_list .itemWrap .item h4 {
+  font-family: "Grotta-Trial-Bold";
+  color: #000;
+  margin-top: 30px;
+}
+.menu_list .itemWrap .item .item_c {
+  font-family: "Grotta-Trial-Medium";
+  color: #6D6D6D;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+.menu_list .itemWrap .item .item_p {
+  font-weight: 700;
+  color: #000;
+  margin-top: 10px;
+}

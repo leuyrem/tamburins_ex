@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@font-face {
+  font-family: "NeueMetana-Bold";
+  src: url(../../public/fonts/NeueMetana-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "NeueMetana-Regular";
+  src: url(../../public/fonts/NeueMetana-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "Grotta-Trial-Semibold";
+  src: url(../..//public/fonts/Grotta-Trial-Semibold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Grotta-Trial-Bold";
+  src: url(../..//public/fonts/Grotta-Trial-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Grotta-Trial-Medium";
+  src: url(../..//public/fonts/Grotta-Trial-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: "Grotta-Trial-Regular";
+  src: url(../..//public/fonts/Grotta-Trial-Regular.otf) format("opentype");
+}
+.main_section {
+  width: 100%;
+  height: auto;
+}
+
+.containerWrap {
+  padding: 0 100px;
+  margin-bottom: 25px;
+}
+
+.left {
+  width: 49%;
+  height: 744px;
+  margin: 0;
+}
+.left .graybox {
+  height: 450px;
+  background-color: #D9D9D9;
+  margin-bottom: 12px;
+  border-radius: 40px;
+  padding: 25px;
+  position: relative;
+}
+.left .graybox::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 250px;
+  width: 22%;
+  height: 20px;
+  background-image: url(../../public/img/arrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.left .graybox .toptext {
+  font-family: "Grotta-Trial-Bold";
+  color: #000;
+  font-size: 3.3rem;
+  line-height: 65px;
+}
+.left .graybox .bottomtext {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #000;
+  margin-top: 120px;
+}
+.left .smallBox1 {
+  width: 49%;
+  height: 280px;
+  background-image: url(../../public/img/main1.png);
+  border-radius: 40px;
+  margin-right: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.left .smallBox1 p {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.4rem;
+  position: absolute;
+  bottom: 5px;
+  left: 40px;
+}
+.left .smallBox2 {
+  width: 49%;
+  height: 280px;
+  background-image: url(../../public/img/main2.jpg);
+  border-radius: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.left .smallBox2 p {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.4rem;
+  position: absolute;
+  bottom: 5px;
+  left: 40px;
+}
+
+.right {
+  width: 50%;
+  height: 744px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 40px;
+  margin-left: 12px;
+}
+.right video {
+  width: 230%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  left: -500px;
+}
+
+.midtxt {
+  font-weight: 700;
+  font-size: 3.3rem;
+  line-height: 80px;
+  padding: 200px 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+  height: 720px;
+  position: relative;
+}
+.midtxt::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 38%;
+  width: 92px;
+  height: 90px;
+  background-image: url(../../public/img/text1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.midtxt::after {
+  content: "";
+  position: absolute;
+  bottom: 33%;
+  right: 34%;
+  width: 92px;
+  height: 90px;
+  background-image: url(../../public/img/text2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.midtxt .mid2::after {
+  content: "";
+  position: absolute;
+  bottom: 50;
+  left: 35%;
+  width: 92px;
+  height: 89px;
+  background-image: url(../../public/img/text3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

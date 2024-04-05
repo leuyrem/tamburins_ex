@@ -1,0 +1,171 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@font-face {
+  font-family: "NeueMetana-Bold";
+  src: url(../../public/fonts/NeueMetana-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "NeueMetana-Regular";
+  src: url(../../public/fonts/NeueMetana-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "Grotta-Trial-Semibold";
+  src: url(../..//public/fonts/Grotta-Trial-Semibold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Grotta-Trial-Bold";
+  src: url(../..//public/fonts/Grotta-Trial-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Grotta-Trial-Medium";
+  src: url(../..//public/fonts/Grotta-Trial-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: "Grotta-Trial-Regular";
+  src: url(../..//public/fonts/Grotta-Trial-Regular.otf) format("opentype");
+}
+.mid_section2 {
+  padding: 200px 100px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.jennie {
+  width: 35%;
+  height: 800px;
+  border-radius: 40px;
+  position: relative;
+  background-image: url(../../public/img/poster.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jennie button {
+  position: absolute;
+  bottom: -10px;
+  left: 160px;
+  border-radius: 10px;
+  border: 8px solid #fff;
+  padding: 10px 80px;
+  font-family: "Grotta-Trial-Bold";
+  color: #000;
+  position: absolute;
+}
+.jennie button::after {
+  content: "";
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+  background-image: url(../../public/img/arrow_tab.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.video_perfume {
+  width: 63.5%;
+  height: 800px;
+  background-color: lightseagreen;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.video_perfume video {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider-container {
+  padding: 30px 100px;
+  position: relative;
+}
+.slider-container h2 {
+  font-family: "Grotta-Trial-Bold";
+  color: #000;
+  font-size: 30px;
+  margin: 35px 0;
+}
+
+.slick-slide {
+  padding: 0 20px;
+}
+
+.arrows {
+  background-color: pink;
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+
+.slick-next:before {
+  content: "→";
+  background-image: url(../../public/img/next_arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 30px;
+}
+
+.slick-prev {
+  background-color: aqua;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.slick-prev:before {
+  content: "";
+  background-image: url(../../public/img/next_arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.ex1 {
+  background-image: url(../../public/img/ex1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+
+.ex2 {
+  background-image: url(../../public/img/ex2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+
+.ex3 {
+  background-image: url(../../public/img/ex3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+
+.ex4 {
+  background-image: url(../../public/img/ex4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
+
+.ex5 {
+  background-image: url(../../public/img/ex5.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+}
