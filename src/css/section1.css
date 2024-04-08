@@ -31,12 +31,17 @@
 .containerWrap {
   padding: 0 100px;
   margin-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .left {
   width: 49%;
   height: 744px;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .left .graybox {
   height: 450px;
@@ -116,13 +121,11 @@
   margin-left: 12px;
 }
 .right video {
-  width: 230%;
   height: 100%;
   position: absolute;
   background-size: cover;
-  background-position: center;
   top: 0;
-  left: -500px;
+  left: -400px;
 }
 
 .midtxt {

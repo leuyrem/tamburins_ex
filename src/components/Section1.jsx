@@ -8,7 +8,7 @@ const Section1 = () => {
   return (
     <div className='main_section'>
       <Row className='containerWrap'>
-        <Col sm={6} className='left'>
+        <Col md={6} className='left'>
           <Row className='graybox'>
             <p className='toptext'>FOR <br /> EVERYONE BUT <br /> NOT ANYONE</p>
             <p className='bottomtext'>We establish personal relationships with our boutiques, to make <br />
@@ -19,7 +19,7 @@ const Section1 = () => {
             <Col className='smallBox2'><p>#THE SHELL</p></Col>
           </Row>
         </Col>
-        <Col sm={6} className='right'>
+        <Col md={6} className='right'>
           <video muted autoPlay loop>
             <source src="/video/FRoom.mp4" type="video/mp4" />
           </video>

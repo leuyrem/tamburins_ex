@@ -7,25 +7,59 @@ import '../scss/section3.scss';
 import Slider from "react-slick";
 
 
+
 const Section3 = () => {
-    const settings = {
-        className: "center",
+   const settings = {
+        dots: false,
+        arrow: true,
         infinite: true,
-        centerPadding: "60px",
+        speed: 500,
         slidesToShow: 3,
-        swipeToSlide: true,
-        afterChange: function(index) {
-          console.log(
-            `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-          );
-        }
+        slidesToScroll: 3,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1440,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 720,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 320,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
 
     return (
         <>
             <Row className='mid_section2'>
                 <Col sm={4} className='jennie' >
-
                     <button>LEARN MORE</button>
                 </Col>
                 <Col sm={8} className='video_perfume'>
@@ -35,29 +69,21 @@ const Section3 = () => {
                 </Col>
             </Row>
 
-            <div className="slider-container">
-                <h2>EXHIBITION</h2>
-                <div className='arrows'>
-
+            <div className='slide_section'>
+                <div className="slider-container">
+                    <h2>EXHIBITION</h2>
+                    <Slider {...settings} className='slider'>
+                        <div className='ex1'></div>
+                        <div className='ex2'></div>
+                        <div className='ex3'></div>
+                        <div className='ex4'></div>
+                        <div className='ex5'></div>
+                    </Slider>
                 </div>
-                <Slider {...settings} className='slider'>
-                    <div className='ex1'>
 
-                    </div>
-                    <div className='ex2'>
-
-                    </div>
-                    <div className='ex3'>
-
-                    </div>
-                    <div className='ex4'>
-
-                    </div>
-                    <div className='ex5'>
-
-                    </div>
-                </Slider>
             </div>
+
+
 
 
         </>

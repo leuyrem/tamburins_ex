@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 @font-face {
   font-family: "NeueMetana-Bold";
@@ -81,9 +80,21 @@
   background-position: center;
 }
 
-.slider-container {
-  padding: 30px 100px;
+.slide_section {
   position: relative;
+}
+.slide_section::before {
+  content: "";
+  background-color: #F5F5F5;
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  bottom: 0;
+  padding: 0;
+}
+
+.slider-container {
+  padding: 200px 100px;
 }
 .slider-container h2 {
   font-family: "Grotta-Trial-Bold";
@@ -96,35 +107,49 @@
   padding: 0 20px;
 }
 
-.arrows {
-  background-color: pink;
-  width: 100%;
-  height: 50px;
-  position: relative;
-}
-
-.slick-next:before {
-  content: "→";
-  background-image: url(../../public/img/next_arrow.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-size: 30px;
+.slick-list {
+  margin: 0 auto;
 }
 
 .slick-prev {
-  background-color: aqua;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -20px;
+  right: 90px;
+  left: auto;
 }
 
-.slick-prev:before {
+.slick-next {
+  position: absolute;
+  top: -39px;
+  right: 22px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+.slick-prev::after {
   content: "";
-  background-image: url(../../public/img/next_arrow.svg);
+  transform: rotate(180deg);
+  background-image: url(../../public/img/arrow_slide.png);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
+  top: -46px;
+  right: 0;
+  left: auto;
+  width: 40px;
+  height: 40px;
+}
+
+.slick-next::after {
+  content: "";
+  background-image: url(../../public/img/arrow_slide.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
   right: 0;
   width: 40px;
   height: 40px;
@@ -135,7 +160,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
+  height: 400px;
 }
 
 .ex2 {
@@ -143,7 +168,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
+  height: 400px;
 }
 
 .ex3 {
@@ -151,7 +176,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
+  height: 400px;
 }
 
 .ex4 {
@@ -159,7 +184,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
+  height: 400px;
 }
 
 .ex5 {
@@ -167,5 +192,5 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
+  height: 400px;
 }
