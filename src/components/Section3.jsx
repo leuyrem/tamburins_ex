@@ -1,14 +1,26 @@
 import React from 'react'
-
 import { Row, Col } from 'react-bootstrap';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../scss/section3.scss';
 import Slider from "react-slick";
-
+import data_all from '../data_all';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 
 const Section3 = () => {
+    const [tamburins, setTamburins] = useState(data_all);
+    const navigate = useNavigate();
+    const origin = data_all;
+
+
+    const filterItem = (category)=>{
+        const copy = [...origin].filter(v => v.category == category);
+        setTamburins(copy);
+      }
+    
+
    const settings = {
         dots: false,
         arrow: true,
@@ -60,7 +72,10 @@ const Section3 = () => {
         <>
             <Row className='mid_section2'>
                 <Col sm={4} className='jennie' >
-                    <button>LEARN MORE</button>
+                    <button onClick={()=> {
+                         filterItem("bam");
+                        navigate('/detail/30')
+                    }}>LEARN MORE</button>
                 </Col>
                 <Col sm={8} className='video_perfume'>
                     <video muted autoPlay loop>
@@ -80,17 +95,8 @@ const Section3 = () => {
                         <div className='ex5'></div>
                     </Slider>
                 </div>
-
             </div>
-
-
-
-
         </>
-
-
-
-
 
     );
 }

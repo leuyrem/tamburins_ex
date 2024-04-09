@@ -89,10 +89,9 @@
 }
 
 
-.slick-list{ //얘로 크기조정 했음
+.slick-list{ //사이즈 조정
     margin: 0 auto;
 }
-
 
 .slick-prev {
     position: absolute;
@@ -107,15 +106,11 @@
     right: 22px;
 }
 
-
-
 .slick-prev:before,
 .slick-next:before
 {
 	display: none;				
 }
-
-
 
 .slick-prev::after {
     content: "";
@@ -142,11 +137,6 @@
     width: 40px;
     height: 40px;
   }
-
-
-
-
-
 
 .ex1 {
     background-image: url(../../public/img/ex1.jpg);

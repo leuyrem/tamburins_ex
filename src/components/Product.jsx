@@ -14,7 +14,7 @@ const Product = (props) => {
 
   return (
     <Col md={4} className='item' onClick={()=>{    
-        navigate('/detail/' + no[i])
+        navigate('/detail/' + tamburins.id)
     }}> 
        <img src={process.env.PUBLIC_URL + tamburins.imgUrl} width='100%' alt="tamburins" />
        <h4>{tamburins.title}</h4>

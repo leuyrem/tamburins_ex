@@ -4,7 +4,7 @@ import Detail from './routes/Detail';
 import './scss/common.scss';
 import data_all from './data_all';
 import { Container, Form, Nav, Navbar } from 'react-bootstrap';
-import { Routes, Route, useNavigate } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
 
@@ -13,8 +13,13 @@ import { useState } from 'react';
 
 function App() {
   const [tamburins, setTamburins] = useState(data_all);
-  const [no, setNo] = useState([0, 1, 2, 3, 4, 5]);
   const navigate = useNavigate();
+  const origin = data_all;
+
+  const filterItem = (category)=>{
+    const copy = [...origin].filter(v => v.category == category);
+    setTamburins(copy);
+  }
 
 
   return (
@@ -45,23 +50,27 @@ function App() {
               >
                 <Nav variant="underline" defaultActiveKey="/home">
                   <Nav.Item>
-                    <Nav.Link onClick={()=> {
-                      navigate('/detail')
+                    <Nav.Link onClick={()=> { 
+                      filterItem("perfume");          
+                      navigate('/detail/10')
                     }} eventKey="link-1">PERFUME</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link onClick={()=> {
-                      navigate('/detail')
+                      filterItem("hand&lip");
+                      navigate('/detail/12')
                     }} eventKey="link-2">HAND&LIP</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link onClick={()=> {
-                      navigate('/detail')
+                      filterItem("body");
+                      navigate('/detail/18')
                     }} eventKey="link-3">BODY</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link onClick={()=> {
-                      navigate('/detail')
+                      filterItem("home");
+                      navigate('/detail/24')
                     }} eventKey="link-4">HOME FRAGRANCE</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
@@ -89,7 +98,7 @@ function App() {
 
 
       <Routes>
-        <Route path="/" element={<Home tamburins={tamburins} no={no}/>} />
+        <Route path="/" element={<Home tamburins={tamburins} setTamburins={setTamburins}/>} />
         <Route path='/detail/:id' element={<Detail tamburins={tamburins}/>}></Route>
       </Routes>
 
