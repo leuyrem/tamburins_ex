@@ -1,27 +1,12 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../scss/section3.scss';
 import Slider from "react-slick";
-import data_all from '../data_all';
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
 
 
 const Section3 = () => {
-    const [tamburins, setTamburins] = useState(data_all);
-    const navigate = useNavigate();
-    const origin = data_all;
-
-
-    const filterItem = (category)=>{
-        const copy = [...origin].filter(v => v.category == category);
-        setTamburins(copy);
-      }
-    
-
-   const settings = {
+    const settings = {
         dots: false,
         arrow: true,
         infinite: true,
@@ -70,29 +55,46 @@ const Section3 = () => {
 
     return (
         <>
-            <Row className='mid_section2'>
-                <Col sm={4} className='jennie' >
-                    <button onClick={()=> {
-                         filterItem("bam");
-                        navigate('/detail/30')
-                    }}>LEARN MORE</button>
-                </Col>
-                <Col sm={8} className='video_perfume'>
-                    <video muted autoPlay loop>
-                        <source src="/video/PERFUME.mp4" type="video/mp4" />
-                    </video>
-                </Col>
-            </Row>
-
             <div className='slide_section'>
                 <div className="slider-container">
                     <h2>EXHIBITION</h2>
                     <Slider {...settings} className='slider'>
-                        <div className='ex1'></div>
-                        <div className='ex2'></div>
-                        <div className='ex3'></div>
-                        <div className='ex4'></div>
-                        <div className='ex5'></div>
+                        <div className='ex1'>
+                            <div className='img_ex1'></div>
+                            <p className='location'>서울 강남구 압구정로46길 50 하우스도산</p>
+                            <h4>토일렛 프래그런스 컬렉션</h4>
+                            <p className='date'>2023. 07. 29 - 2023. 08. 29</p>
+                        </div>
+                        <div className='ex2'>
+                            <div className='img_ex2'></div>
+                            <p className='location'>서울 성동구 연무장5길 8</p>
+                            <h4>하베스트 퍼퓸 비누 컬렉션</h4>
+                            <p className='date'>2023. 04. 28 - 2023. 05. 28</p>
+                        </div>
+                        <div className='ex3'>
+                        <div className='img_ex3'></div>
+                            <p className='location'>서울 강남구 압구정로46길 50 하우스도산</p>
+                            <h4>퍼퓸밤 컬렉션</h4>
+                            <p className='date'>2022. 11. 25 - 2022. 12. 18</p>
+                        </div>
+                        <div className='ex4'>
+                        <div className='img_ex4'></div>
+                            <p className='location'>서울 성동구 금호로3길 14</p>
+                            <h4>향수 컬렉션</h4>
+                            <p className='date'>2022. 09. 30 - 2022. 10. 30</p>
+                        </div>
+                        <div className='ex5'>
+                        <div className='img_ex5'></div>
+                            <p className='location'>서울 강남구 압구정로46길 50 하우스도산</p>
+                            <h4>샤워리바디 컬렉션</h4>
+                            <p className='date'>2022. 06. 04 - 2022. 06. 30</p>
+                        </div>
+                        <div className='ex6'>
+                        <div className='img_ex6'></div>
+                            <p className='location'>서울특별시 성동구 성수이로 20길 57</p>
+                            <h4>코쿤 컬렉션</h4>
+                            <p className='date'>2021.10. 20 – 2021.11.21</p>
+                        </div>
                     </Slider>
                 </div>
             </div>

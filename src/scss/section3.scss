@@ -1,65 +1,8 @@
 @charset "utf-8";
 @import "fonts", "base";
 
-//poster
-.mid_section2 {
-    padding: 200px 100px;
-    margin: 0;
-    @include flex-between
-}
-
-.jennie {
-    width: 35%;
-    height: 800px;
-    border-radius: 40px;
-    position: relative;
-    background-image: url(../../public/img/poster.jpg);
-    @include background-set;
-
-    button {
-        position: absolute;
-        bottom: -10px;
-        left: 160px;
-        border-radius: 10px;
-        @include box_border (8px, $c);
-        padding: 10px 80px;
-        @include font-style;
-        position: absolute;
-
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 14px;
-            right: 20px;
-            width: 15px;
-            height: 15px;
-            background-image: url(../../public/img/arrow_tab.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-    }
-}
-
-.video_perfume {
-    width: 63.5%;
-    height: 800px;
-    background-color: lightseagreen;
-    border-radius: 40px;
-    position: relative;
-    overflow: hidden;
-
-    video {
-        width: 100%;
-        position: absolute;
-        left: 0;
-        background-size: cover;
-        background-position: center;
-    }
-}
 
 //슬라이드
-
 .slide_section {
     position: relative;
 
@@ -71,7 +14,7 @@
         position: absolute;
         bottom: 0;
         padding: 0;
-    }    
+    }
 }
 
 .slider-container {
@@ -88,8 +31,8 @@
     padding: 0 20px;
 }
 
-
-.slick-list{ //사이즈 조정
+.slick-list {
+    //사이즈 조정
     margin: 0 auto;
 }
 
@@ -107,9 +50,8 @@
 }
 
 .slick-prev:before,
-.slick-next:before
-{
-	display: none;				
+.slick-next:before {
+    display: none;
 }
 
 .slick-prev::after {
@@ -124,9 +66,9 @@
     left: auto;
     width: 40px;
     height: 40px;
-  }
+}
 
-  .slick-next::after {
+.slick-next::after {
     content: "";
     background-image: url(../../public/img/arrow_slide.png);
     background-repeat: no-repeat;
@@ -136,34 +78,71 @@
     right: 0;
     width: 40px;
     height: 40px;
-  }
+}
+
+.slider {
+    .location {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    h4 {
+        font-size: 22px;
+        margin-top: -8px;
+    }
+
+    .date {
+        font-size: 12px;
+        margin-top: 15px;
+        color: $d;
+    }
+
+}
 
 .ex1 {
-    background-image: url(../../public/img/ex1.jpg);
-    @include background-set;
-    height: 400px;
+    .img_ex1 {
+        background-image: url(../../public/img/ex1.jpg);
+        @include background-set;
+        height: 400px;
+    }
 }
 
 .ex2 {
-    background-image: url(../../public/img/ex2.jpg);
-    @include background-set;
-    height: 400px;
+    .img_ex2 {
+        background-image: url(../../public/img/ex2.jpg);
+        @include background-set;
+        height: 400px;
+    }
 }
 
 .ex3 {
-    background-image: url(../../public/img/ex3.jpg);
-    @include background-set;
-    height: 400px;
+    .img_ex3 {
+        background-image: url(../../public/img/ex3.jpg);
+        @include background-set;
+        height: 400px;
+    }
 }
 
 .ex4 {
-    background-image: url(../../public/img/ex4.jpg);
-    @include background-set;
-    height: 400px;
+    .img_ex4 {
+        background-image: url(../../public/img/ex4.jpg);
+        @include background-set;
+        height: 400px;
+    }
 }
 
 .ex5 {
-    background-image: url(../../public/img/ex5.jpg);
-    @include background-set;
-    height: 400px;
+    .img_ex5 {
+        background-image: url(../../public/img/ex5.jpg);
+        @include background-set;
+        height: 400px;
+    }
+}
+
+.ex6 {
+    .img_ex6 {
+        background-image: url(../../public/img/ex6.jpg);
+        @include background-set;
+        height: 400px;
+    }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Row, Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import '../scss/detail.scss'
@@ -12,6 +12,7 @@ const Detail = (props) => {
   const selproduct = tamburins.find(x=>x.id==id)
 
 
+
   return (
     <>
       <div className='detailWrap'>
@@ -20,6 +21,8 @@ const Detail = (props) => {
             <img src={selproduct.imgUrl} width="100%" />
             <img src={selproduct.imgUrl_sub} width="100%" />
           </Col>
+
+
 
           <Col lg={6} className='buy'>
             <div className="info">

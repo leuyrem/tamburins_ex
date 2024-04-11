@@ -5,17 +5,21 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import ScrollToTop from './ScrollToTop';
-
+import buy_store from './buystore.js';
+import { Provider } from 'react-redux';
+import buystore from './buystore.js';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-    <ScrollToTop/>
-    <App />    
-    </BrowserRouter>
+    <Provider buystore={buystore}>
+        <BrowserRouter>
+          <ScrollToTop/>
+          <App />    
+        </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 

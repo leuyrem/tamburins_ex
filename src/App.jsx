@@ -1,12 +1,13 @@
 import './App.css';
 import Home from './routes/Home';
 import Detail from './routes/Detail';
+import Store from './routes/Store';
 import './scss/common.scss';
 import data_all from './data_all';
 import { Container, Form, Nav, Navbar } from 'react-bootstrap';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-
+import Cart from './routes/Cart';
 
 
 
@@ -75,7 +76,7 @@ function App() {
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link onClick={()=> {
-                      navigate('/detail')
+                      navigate('/store')
                     }} eventKey="link-5">STORE</Nav.Link>
                   </Nav.Item>
                 </Nav>
@@ -99,7 +100,9 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home tamburins={tamburins} setTamburins={setTamburins}/>} />
-        <Route path='/detail/:id' element={<Detail tamburins={tamburins}/>}></Route>
+        <Route path='/detail/:id' element={<Detail tamburins={tamburins}/>} />
+        <Route path='/store' element={<Store tamburins={tamburins} />}/>
+        <Route path='/cart' element={<Cart />}/>
       </Routes>
 
 

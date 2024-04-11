@@ -30,7 +30,6 @@
         padding: 10px 20px;
         font-size: 20px;
     }
-
 }
 
 .menu_list {
@@ -44,11 +43,20 @@
             text-align: center;
              margin-bottom: 30px;
 
+             &:hover {
+                cursor: pointer;
+             }
+
             img {
                 border-radius: 40px;
                 height: 600px;
-            }
+                transition: all 0.2s linear;
 
+                &:hover {
+                    transform: scale(0.9);
+                }
+            }
+            
             h4 {
                 @include font-style;
                 margin-top: 30px;
@@ -65,5 +73,61 @@
                 margin-top: 10px;
             }
         }
+    }
+}
+
+//poster
+.mid_section2 {
+    padding: 200px 100px;
+    margin: 0;
+    @include flex-between;
+    flex-wrap: wrap;
+}
+
+.jennie {
+    width: 596px;
+    height: 800px;
+    border-radius: 40px;
+    position: relative;
+    background-image: url(../../public/img/poster.jpg);
+    @include background-set;
+
+    button {
+        position: absolute;
+        bottom: -10px;
+        left: 160px;
+        border-radius: 10px;
+        @include box_border (8px, $c);
+        padding: 10px 80px;
+        @include font-style;
+        position: absolute;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 14px;
+            right: 20px;
+            width: 15px;
+            height: 15px;
+            background-image: url(../../public/img/arrow_tab.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+.video_perfume {
+    width: 63.5%;
+    height: 800px;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+
+    video {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        background-size: cover;
+        background-position: center;
     }
 }

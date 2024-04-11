@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import '../scss/section2.scss';
 import Product from './Product';
 import data_all from '../data_all';
-import { Button, Row } from 'react-bootstrap';
-
+import { Button, Row, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 
 const Section2 = (props) => {
@@ -19,8 +19,11 @@ const Section2 = (props) => {
         filterItem("all");
     },[])
 
+    const navigate = useNavigate();
+
     return (
-        <div className='mid_section'>
+        <>
+<div className='mid_section'>
             <div className='Wrap'>
                 <div className='tab'>
                     <p className='tab_txt'>SHOP BY <br /> ESSENTIALS</p>
@@ -54,6 +57,21 @@ const Section2 = (props) => {
                 </div>
             </div>
         </div>
+         <Row className='mid_section2'>
+         <Col sm={4} className='jennie' >
+             <button onClick={() => {
+                 filterItem("bam");
+                 navigate('/detail/30')
+             }}>LEARN MORE</button>
+         </Col>
+         <Col sm={8} className='video_perfume'>
+             <video muted autoPlay loop>
+                 <source src="/video/PERFUME.mp4" type="video/mp4" />
+             </video>
+         </Col>
+     </Row>        
+        </>
+        
     
     )
 }

@@ -67,6 +67,18 @@
         border-radius: 50px;
         background-color: $c;
         font-size: 13px;
+        
+        &:hover {
+            cursor: pointer;
+            background-color: $a;
+            @include box_border(1px, $a);
+            color: $c;
+        }
+
+        &:active {
+            background-color: $d;
+            opacity: 0.8;
+        }
     }
 
     button {
@@ -81,6 +93,15 @@
             background-color: $c;
             @include box_border(1px, $a);
             color: $a;
+            opacity: 0.8;
+        }
+    }
+
+    .btn {
+        &:active {
+            @include box_border(1px, $a);
+            background-color: $d;
+            opacity: 0.8;
         }
     }
 
@@ -89,7 +110,6 @@
         p {
             display: flex;
             justify-content: space-between;
-
         }
     }
 
