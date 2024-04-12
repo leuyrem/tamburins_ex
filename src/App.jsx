@@ -22,6 +22,12 @@ function App() {
     setTamburins(copy);
   }
 
+  const [isOpen, setMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setMenu(isOpen => !isOpen);
+  }
+
 
   return (
     <div className="App">
@@ -51,29 +57,44 @@ function App() {
               >
                 <Nav variant="underline" defaultActiveKey="/home">
                   <Nav.Item>
-                    <Nav.Link onClick={()=> { 
+                    <Nav.Link className='tab1' eventKey="link-1" onClick={()=> toggleMenu()}>PERFUME
+                    </Nav.Link>
+                    <div className='move1' onClick={()=> { 
                       filterItem("perfume");          
                       navigate('/detail/10')
-                    }} eventKey="link-1">PERFUME</Nav.Link>
+                    }}></div>
                   </Nav.Item>
+
+
+
+
                   <Nav.Item>
                     <Nav.Link onClick={()=> {
                       filterItem("hand&lip");
                       navigate('/detail/12')
                     }} eventKey="link-2">HAND&LIP</Nav.Link>
                   </Nav.Item>
+
+
+
+
                   <Nav.Item>
                     <Nav.Link onClick={()=> {
                       filterItem("body");
                       navigate('/detail/18')
                     }} eventKey="link-3">BODY</Nav.Link>
                   </Nav.Item>
+
+
+
                   <Nav.Item>
                     <Nav.Link onClick={()=> {
                       filterItem("home");
                       navigate('/detail/24')
                     }} eventKey="link-4">HOME FRAGRANCE</Nav.Link>
                   </Nav.Item>
+
+
                   <Nav.Item>
                     <Nav.Link onClick={()=> {
                       navigate('/store')

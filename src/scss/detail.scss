@@ -3,18 +3,19 @@
 
 .detailWrap {
     width: 100%;
-    height: 244vh;
+    height: auto;
+    position: relative;
 }
 
 .detail_inner {
     width: 100%;
-    position: absolute;
-    top: 30px;
+margin-top: -150px;
 }
 
 .product {
     width: 950px;
     --bs-gutter-x: 0;
+    z-index: -100;
 }
 
 .buy {
@@ -117,6 +118,119 @@
 
 
 
+  //상품추천
+
+.recommend {
+    position: relative;
+    background-color: lightblue;
+
+    .together {
+        margin: 0 auto;
+        padding: 150px 100px;
+
+        h4 {
+            display: block;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    }
+
+    .swiper {
+        height: 400px;  
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 10;
+        display: block;
+    }
+
+    .swiper-wrapper {
+        width: 100%;
+        height: 400px;
+        background-color: pink;
+    }
+    
+    .swiper-scrollbar {
+        border-radius: var(--swiper-scrollbar-border-radius, 10px);
+        position: relative;
+        touch-action: none;
+        background:  rgba(255, 255, 255, 0) !important;
+    }
+    
+    .swiper-scrollbar-drag {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        border-radius: var(--swiper-scrollbar-border-radius, 10px);
+        left: 0;
+        top: 0;
+        background: rgb(255, 255, 255, 0.8) !important;
+    }
+    
+    
+    .product1 {
+        background-image: url(../../public/img/p3.jpg);
+        @include background-set;
+       width: 50%;
+    }
+    
+    .product2 {
+        background-image: url(../../public/img/perfume1.jpg);
+        @include background-set;
+        height: 100%;
+    }
+    
+    .product3 {
+        background-image: url(../../public/img/perfume4.jpg);
+        @include background-set;
+        height: 100%;
+    }
+    
+    .product4 {
+        background-image: url(../../public/img/p6.jpg);
+        @include background-set;
+        height: 100%;
+    }
+    
+    .product5 {
+        background-image: url(../../public/img/bam1.jpg);
+        @include background-set;
+        height: 100%;
+    }
+    
+    .product6 {
+        background-image: url(../../public/img/body3.jpg);
+        @include background-set;
+        height: 100%;
+    }
+    
+    .product7 {
+        background-image: url(../../public/img/home6.jpg);
+        @include background-set;
+        height: 100%;
+    }
+    
+    .product8 {
+        background-image: url(../../public/img/p5.jpg);
+        @include background-set;
+        height: 100%;
+    }
+    
+    .product9 {
+        background-image: url(../../public/img/body5.jpg);
+        @include background-set;
+        height: 100%;
+    }
+    
+    .product10 {
+        background-image: url(../../public/img/Candle1.jpg);
+        @include background-set;
+        height: 100%;
+    }
+}
 
 
 
@@ -133,23 +247,3 @@
 
 
 
-
-// .slider-container2 {
-//     padding: 0;
-//     height: auto;
-//     position: relative;
-
-//     .slick-dots {}
-// }
-
-// .product_thumb1 img {
-//     @include background-set;
-//     width: 100%;
-// }
-
-
-// .product_thumb2 {
-//     background-image: url(../../public/img/p1-1.jpg);
-//     @include background-set;
-//     width: 100%;
-// }

@@ -21,7 +21,7 @@
   margin: 20px 0;
   position: sticky;
   top: 20px;
-  z-index: 1;
+  z-index: 100;
 }
 
 .headerWrap {
@@ -48,6 +48,18 @@
   margin-right: 25px;
 }
 
+.tab1 {
+
+ 
+}
+
+// .move1 {
+//      background-image: url(../../public/img/p1.jpg);
+//     @include background-set;
+//     width: 200px;
+//     height: 200px; 
+// }
+
 .search {
   border: none;
   background-color: #F5F5F5;
@@ -59,6 +71,8 @@
 .login {
   margin: 0 20px;
 }
+
+// 푸터
 
 .footer {
   width: 100%;

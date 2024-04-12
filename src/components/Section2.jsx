@@ -52,7 +52,6 @@ const Section2 = (props) => {
                                 <Product tamburins={tamburin} key={i} i={i} />
                             )
                         }
-
                     </Row>
                 </div>
             </div>

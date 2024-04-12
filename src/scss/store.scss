@@ -3,81 +3,247 @@
 
 .store_section {
     width: 100%;
-    height: 1000px;
-    position: relative;
+    height: auto;
 }
 
-.storeWrap {
-    padding: 0px 380px;  
+.swiper-slide {
+    flex-shrink: 1;
 }
 
 .swiper {
-    position: absolute;
-    width: 1134px;
-    height: 637px;  
+    height: 60vh;  
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 10;
+    display: block;
+}
 
+.swiper-scrollbar {
+    border-radius: var(--swiper-scrollbar-border-radius, 10px);
+    position: relative;
+    touch-action: none;
+    background:  rgba(255, 255, 255, 0) !important;
+}
+
+.swiper-scrollbar-drag {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: var(--swiper-scrollbar-border-radius, 10px);
+    left: 0;
+    top: 0;
+    background: rgb(255, 255, 255, 0.8) !important;
 }
 
 .store_info {
-    @include flex-between;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.store1 {
-    background-image: url(../../public/img/store_hannam_01.jpg);
-    @include background-set;
-    height: 100%;
+.left_txt {
+    display: block;
+
+    p {
+        font-weight: 500;
+    }
+
+    span {
+        text-decoration: underline;
+        font-size: 14px;
+    }
 }
 
-.store2 {
-    background-image: url(../../public/img/store_hannam_02.jpg);
-    @include background-set;
-    height: 100%;
+.right_txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    p {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
 }
 
-.store3 {
-    background-image: url(../../public/img/store_hannam_03.jpg);
-    @include background-set;
-    height: 100%;
+//한남스토어
+.hannam {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 80px;
 }
 
-.store4 {
-    background-image: url(../../public/img/store_hannam_04.jpg);
-    @include background-set;
-    height: 100%;
+.hannam_store1 {
+    width: 100%;
 }
 
-.store5 {
-    background-image: url(../../public/img/store_hannam_05.jpg);
-    @include background-set;
-    height: 100%;
+.hannam_store2 {
+    width: 100%;
 }
 
-.store6 {
-    background-image: url(../../public/img/store_hannam_06.jpg);
-    @include background-set;
-    height: 100%;
+.hannam_store3 {
+    width: 100%;
 }
 
-.store7 {
-    background-image: url(../../public/img/store_hannam_07.jpg);
-    @include background-set;
-    height: 100%;
+.hannam_store4 {
+    width: 100%;
 }
 
-.store8 {
-    background-image: url(../../public/img/store_hannam_08.jpg);
-    @include background-set;
-    height: 100%;
+.hannam_store5 {
+    width: 100%;
 }
 
-.store9 {
-    background-image: url(../../public/img/store_hannam_09.jpg);
-    @include background-set;
-    height: 100%;
+.hannam_store6 {
+    width: 100%;
 }
 
-.store10 {
-    background-image: url(../../public/img/store_hannam_10.jpg);
-    @include background-set;
-    height: 100%;
+.hannam_store7 {
+    width: 100%;
+}
+
+.hannam_store8 {
+    width: 100%;
+}
+
+.hannam_store9 {
+    width: 100%;
+}
+
+.hannam_store10 {
+    width: 100%;
+}
+
+//성수스토어
+.seongsu {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+.seongsu_store1 {
+    width: 100%;
+    background-image: url(../../public/img/Sinsa1.jpg);
+}
+
+.seongsu_store2 {
+    width: 100%;
+}
+
+.seongsu_store3 {
+    width: 100%;
+}
+
+.seongsu_store4 {
+    width: 100%;
+}
+
+.seongsu_store5 {
+    width: 100%;
+}
+
+.seongsu_store6 {
+    width: 100%;
+}
+
+.seongsu_store7 {
+    width: 100%;
+}
+
+
+
+//삼청스토어
+.samcheong {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+.samcheong_store1 {
+    width: 100%;
+}
+
+.samcheong_store2 {
+    width: 100%;
+}
+
+.samcheong_store3 {
+    width: 100%;
+}
+
+.samcheong_store4 {
+    width: 100%;
+}
+
+
+//도산스토어
+.dosan {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+.dosan_store1 {
+    width: 100%;
+}
+
+.dosan_store2 {
+    width: 100%;
+}
+
+.dosan_store3 {
+    width: 100%;
+}
+
+.dosan_store4 {
+    width: 100%;
+}
+
+.dosan_store5 {
+    width: 100%;
+}
+
+
+//신사스토어
+.sinsa {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 250px;
+}
+
+.sinsa_store1 {
+    width: 100%;
+}
+
+.sinsa_store2 {
+    width: 100%;
+}
+
+.sinsa_store3 {
+    width: 100%;
+}
+
+.sinsa_store4 {
+    width: 100%;
+}
+
+.sinsa_store5 {
+    width: 100%;
+}
+
+.sinsa_store6 {
+    width: 100%;
+}
+
+.sinsa_store7 {
+    width: 100%;
 }
