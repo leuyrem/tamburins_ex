@@ -69,45 +69,8 @@ let data_all = [
 
 
 
-
 {
   id: 6,
-  category: "perfume",
-  title: "EGG PERFUME PUMKINI",   
-  imgUrl: "/img/perfume1.jpg",
-  imgUrl_sub: "/img/perfume1-1.jpg",
-  content: "Sweet PumpkinㅣShiso LeafㅣCoconut Milk",   
-  type: "하얀 호박에서 느껴지는 청초하고 달콤한 향에 차조기잎과 블러드오렌지의 독특한 푸르름이 더해져 기분 좋은 놀라움을 선사합니다. 잘 여물어 진득해진 호박향과 진저의 스파이시함이 교차되어 독특한 조화를 이루고 뒤이어 밀려오는 크리미한 코코넛밀크는 부드러운 샌달우드와 함께 오묘한 잔상을 만들며 깊은 여운을 그려냅니다.", 
-  size: "14mL", 
-  size_sub: "50mL",
-  price: "₩ 45,800"   
-},
-{
-  id: 7,
-  category: "perfume",
-  title: "EGG PERFUME HOLY METAL",   
-  imgUrl: "/img/perfume2.jpg",
-  imgUrl_sub: "/img/perfume2-1.jpg",
-  content: "Cypress LeafㅣCold MetalㅣWhite Musk",   
-  type: "우연히 발 딛은 신성한 유적지의 성전에서 느껴지는 깨끗하고 차분한 공기를 떠올리게 합니다. 푸른 측백나무 잎가지와 세이지의 조합에 깊이를 더해주는 인센스와 절제된 차가움을 지닌 금속성의 느낌이 어우러져 마치 정지된 시간의 순간을 맞이한 듯 신비한 느낌을 자아내고, 화이트 머스크와 우디노트가 기분 좋은 여운으로 어우러져 오랜 시간 은은하게 머무릅니다.", 
-  size: "14mL", 
-  size_sub: "50mL",
-  price: "₩ 45,800"   
-},
-{
-  id: 8,
-  category: "perfume",
-  title: "EGG PERFUME WOOD SALT BEACH",   
-  imgUrl: "/img/perfume3.jpg",
-  imgUrl_sub: "/img/perfume3-1.jpg",
-  content: "RosewoodㅣSea SaltㅣAmbrette Seed",   
-  type: "햇살에 물든 에메랄드빛 바다와 숲의 경계에서 불어오는 시원한 바람을 떠오르게 합니다. 첫 시작을 여는 달콤한 로즈우드와 베르가못이 기분좋은 청량함을 주고, 짭짤한 바다내음이 느껴지는 씨솔트향은 한가로운 여름날의 추억을 비춥니다. 뒤이어 시더우드와 머스크가 포근하게 감싸 안아 무게감 있게 마무리됩니다.", 
-  size: "14mL", 
-  size_sub: "50mL",
-  price: "₩ 45,800"   
-},
-{
-  id: 9,
   category: "perfume",
   title: "PERFUME CHAMO",   
   imgUrl: "/img/perfume4.jpg",
@@ -119,7 +82,7 @@ let data_all = [
   price: "₩ 139,000"   
 },
 {
-  id: 10,
+  id: 7,
   category: "perfume",
   title: "PERFUME WHITE DARJEELING",   
   imgUrl: "/img/perfume5.jpg",
@@ -131,7 +94,7 @@ let data_all = [
   price: "₩ 129,000"   
 },
 {
-  id: 11,
+  id: 8,
   category: "perfume",
   title: "PERFUME LALE",   
   imgUrl: "/img/perfume6.jpg",
@@ -142,6 +105,43 @@ let data_all = [
   size_sub: "50mL",
   price: "₩ 139,000"   
 },
+{
+  id: 9,
+  category: "perfume",
+  title: "EGG PERFUME PUMKINI",   
+  imgUrl: "/img/perfume1.jpg",
+  imgUrl_sub: "/img/perfume1-1.jpg",
+  content: "Sweet PumpkinㅣShiso LeafㅣCoconut Milk",   
+  type: "하얀 호박에서 느껴지는 청초하고 달콤한 향에 차조기잎과 블러드오렌지의 독특한 푸르름이 더해져 기분 좋은 놀라움을 선사합니다. 잘 여물어 진득해진 호박향과 진저의 스파이시함이 교차되어 독특한 조화를 이루고 뒤이어 밀려오는 크리미한 코코넛밀크는 부드러운 샌달우드와 함께 오묘한 잔상을 만들며 깊은 여운을 그려냅니다.", 
+  size: "14mL", 
+  size_sub: "50mL",
+  price: "₩ 45,800"   
+},
+{
+  id: 10,
+  category: "perfume",
+  title: "EGG PERFUME HOLY METAL",   
+  imgUrl: "/img/perfume2.jpg",
+  imgUrl_sub: "/img/perfume2-1.jpg",
+  content: "Cypress LeafㅣCold MetalㅣWhite Musk",   
+  type: "우연히 발 딛은 신성한 유적지의 성전에서 느껴지는 깨끗하고 차분한 공기를 떠올리게 합니다. 푸른 측백나무 잎가지와 세이지의 조합에 깊이를 더해주는 인센스와 절제된 차가움을 지닌 금속성의 느낌이 어우러져 마치 정지된 시간의 순간을 맞이한 듯 신비한 느낌을 자아내고, 화이트 머스크와 우디노트가 기분 좋은 여운으로 어우러져 오랜 시간 은은하게 머무릅니다.", 
+  size: "14mL", 
+  size_sub: "50mL",
+  price: "₩ 45,800"   
+},
+{
+  id: 11,
+  category: "perfume",
+  title: "EGG PERFUME WOOD SALT BEACH",   
+  imgUrl: "/img/perfume3.jpg",
+  imgUrl_sub: "/img/perfume3-1.jpg",
+  content: "RosewoodㅣSea SaltㅣAmbrette Seed",   
+  type: "햇살에 물든 에메랄드빛 바다와 숲의 경계에서 불어오는 시원한 바람을 떠오르게 합니다. 첫 시작을 여는 달콤한 로즈우드와 베르가못이 기분좋은 청량함을 주고, 짭짤한 바다내음이 느껴지는 씨솔트향은 한가로운 여름날의 추억을 비춥니다. 뒤이어 시더우드와 머스크가 포근하게 감싸 안아 무게감 있게 마무리됩니다.", 
+  size: "14mL", 
+  size_sub: "50mL",
+  price: "₩ 45,800"   
+},
+
 
 
 

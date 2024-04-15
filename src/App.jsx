@@ -57,16 +57,17 @@ function App() {
               >
                 <Nav variant="underline" defaultActiveKey="/home">
                   <Nav.Item>
-                    <Nav.Link className='tab1' eventKey="link-1" onClick={()=> toggleMenu()}>PERFUME
+                  <Nav.Link onClick={()=> {
+                      filterItem("perfume");
+                      navigate('/detail/6')
+                    }} eventKey="link-1">PERFUME</Nav.Link>
+                    {/* <Nav.Link className='tab1' eventKey="link-1" onClick={()=> toggleMenu()}>PERFUME
                     </Nav.Link>
                     <div className='move1' onClick={()=> { 
                       filterItem("perfume");          
                       navigate('/detail/10')
-                    }}></div>
+                    }}></div> */}
                   </Nav.Item>
-
-
-
 
                   <Nav.Item>
                     <Nav.Link onClick={()=> {
@@ -75,9 +76,6 @@ function App() {
                     }} eventKey="link-2">HAND&LIP</Nav.Link>
                   </Nav.Item>
 
-
-
-
                   <Nav.Item>
                     <Nav.Link onClick={()=> {
                       filterItem("body");
@@ -85,15 +83,12 @@ function App() {
                     }} eventKey="link-3">BODY</Nav.Link>
                   </Nav.Item>
 
-
-
                   <Nav.Item>
                     <Nav.Link onClick={()=> {
                       filterItem("home");
                       navigate('/detail/24')
                     }} eventKey="link-4">HOME FRAGRANCE</Nav.Link>
                   </Nav.Item>
-
 
                   <Nav.Item>
                     <Nav.Link onClick={()=> {

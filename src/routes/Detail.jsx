@@ -1,18 +1,39 @@
-import React, { useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Col, Row, Button } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate, Outlet } from 'react-router-dom';
 import '../scss/detail.scss'
-
+import Product from "../components/Product";
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { Scrollbar } from 'swiper/modules';
+import data_all from "../data_all";
+import { Virtual } from 'swiper/modules';
+
 
 const Detail = (props) => {
-  const { tamburins } = props;
+  const { tamburins, setTamburins } = props;
   const { id } = useParams();
   console.log(tamburins, id)
   const selproduct = tamburins.find(x => x.id == id)
+  const relproduct = tamburins.filter(x => x.id !== id && x.category === selproduct.category)
+  console.log(relproduct)
+
+
+
+  const origin = data_all;
+
+  const filterItem = (category) => {
+    const copy = [...origin].filter(v => v.category == category);
+    setTamburins(copy);
+  }
+
+  const navigate = useNavigate();
+
+
+  const slides = Array.from({ length: 1000 }).map(
+    (el, index) => `Slide ${index + 1}`
+  );
 
 
 
@@ -32,7 +53,16 @@ const Detail = (props) => {
                 <p className="price">{selproduct.price}</p>
                 <p className="content">{selproduct.content}</p>
                 <p className="type">{selproduct.type}</p>
-                <div className="more_product">다른 상품 이미지</div>
+                <div className="more_product">
+                  <Swiper modules={[Virtual]} spaceBetween={10} slidesPerView={5} virtual>
+                     {/* navigate('/detail/' + tamburins.id) */}
+                    {relproduct.map((rel, i) => (
+                      <SwiperSlide key={rel} virtualIndex={i}>
+                        {<img src={process.env.PUBLIC_URL + rel.imgUrl} width="100%" onClick={() => { }} />}
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
                 <p className="size">사이즈</p>
                 <p className="gram"><span>{selproduct.size}</span></p>
                 {/* <p className="gram"><span>{selproduct.size_sub}</span></p> */}
@@ -54,12 +84,17 @@ const Detail = (props) => {
           </Col>
         </Row>
 
+
+
+
+
+
         <div className="recommend">
           <div className='together'>
             <h4>고객님을 위한 추천 상품</h4>
-            <Swiper
-              className="mySwiper"
-              spaceBetween={50}
+            <Swiper 
+              className="recommend_swiper"
+              spaceBetween={0}
               slidesPerView={5}
               scrollbar={{ hide: true, }}
               modules={[Scrollbar]}
@@ -76,37 +111,21 @@ const Detail = (props) => {
                 200: {
                   slidesPerView: 1,
                 },
-              }}
-            >
-              <SwiperSlide className='product1'>
-                <div className="product_data1">
-                  <div className="tit"></div>
-                  <div className="type"></div>
-                  <div className="price"></div>
+              }} >
 
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className='product2'></SwiperSlide>
-              <SwiperSlide className='product3'></SwiperSlide>
-              <SwiperSlide className='product4'></SwiperSlide>
-              <SwiperSlide className='product5'></SwiperSlide>
-              <SwiperSlide className='product6'></SwiperSlide>
-              <SwiperSlide className='product7'></SwiperSlide>
-              <SwiperSlide className='product8'></SwiperSlide>
-              <SwiperSlide className='product9'></SwiperSlide>
-              <SwiperSlide className='product10'></SwiperSlide>
+              {tamburins.map((tamburin, i) => (
+                <SwiperSlide className="recommend_slide" key={tamburins} virtualIndex={i}>
+                  <Product tamburins={tamburin} i={i} />
+                </SwiperSlide>
+              ))}
             </Swiper>
+
+
 
           </div>
         </div>
-
-
-
-
       </div>
     </>
-
-
   )
 }
 

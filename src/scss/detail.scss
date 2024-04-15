@@ -9,7 +9,7 @@
 
 .detail_inner {
     width: 100%;
-margin-top: -150px;
+    margin-top: -150px;
 }
 
 .product {
@@ -54,21 +54,33 @@ margin-top: -150px;
     .more_product {
         border-bottom: 1px solid $f;
         padding-bottom: 20px;
+        padding-top: 50px;
+        img {
+            border-radius: 10px;
+            padding: 3px;
+
+            &:hover {
+                border: 1px solid $a;
+              
+            }
+        }
+
+
     }
 
     .size {
         font-size: 12px;
         color: #1d1d1d;
-        padding: 20px 0 5px 0; 
+        padding: 20px 0 5px 0;
     }
-    
-    .gram span{
+
+    .gram span {
         @include box_border(1px, $a);
         padding: 10px 40px;
         border-radius: 50px;
         background-color: $c;
         font-size: 13px;
-        
+
         &:hover {
             cursor: pointer;
             background-color: $a;
@@ -108,6 +120,7 @@ margin-top: -150px;
 
     .add {
         margin-top: 50px;
+
         p {
             display: flex;
             justify-content: space-between;
@@ -118,11 +131,10 @@ margin-top: -150px;
 
 
 
-  //상품추천
+//상품추천
 
 .recommend {
     position: relative;
-    background-color: lightblue;
 
     .together {
         margin: 0 auto;
@@ -133,117 +145,72 @@ margin-top: -150px;
             text-align: center;
             margin-bottom: 50px;
         }
+
+        .recommend_swiper {
+
+        }
+
+        .recommend_slide {
+            img {
+                width: 300px;
+                border-radius: 10px;
+            }
+
+            h4 {
+                width: 300px;
+                font-size: 16px;
+                margin-top: 20px;
+            }
+
+            .item_c {
+                width: 300px;
+                font-size: 14px;
+                text-align: center;
+                margin-top: -40px;
+            }
+
+            .item_p {
+                width: 300px;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+        }
     }
 
-    .swiper {
-        height: 400px;  
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-        overflow: hidden;
-        list-style: none;
-        padding: 0;
-        z-index: 10;
-        display: block;
-    }
+    // .swiper {
+    //     height: 400px;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //     position: relative;
+    //     overflow: hidden;
+    //     list-style: none;
+    //     padding: 0;
+    //     z-index: 10;
+    //     display: block;
+    // }
 
-    .swiper-wrapper {
-        width: 100%;
-        height: 400px;
-        background-color: pink;
-    }
-    
-    .swiper-scrollbar {
-        border-radius: var(--swiper-scrollbar-border-radius, 10px);
-        position: relative;
-        touch-action: none;
-        background:  rgba(255, 255, 255, 0) !important;
-    }
-    
-    .swiper-scrollbar-drag {
-        height: 100%;
-        width: 100%;
-        position: relative;
-        border-radius: var(--swiper-scrollbar-border-radius, 10px);
-        left: 0;
-        top: 0;
-        background: rgb(255, 255, 255, 0.8) !important;
-    }
-    
-    
-    .product1 {
-        background-image: url(../../public/img/p3.jpg);
-        @include background-set;
-       width: 50%;
-    }
-    
-    .product2 {
-        background-image: url(../../public/img/perfume1.jpg);
-        @include background-set;
-        height: 100%;
-    }
-    
-    .product3 {
-        background-image: url(../../public/img/perfume4.jpg);
-        @include background-set;
-        height: 100%;
-    }
-    
-    .product4 {
-        background-image: url(../../public/img/p6.jpg);
-        @include background-set;
-        height: 100%;
-    }
-    
-    .product5 {
-        background-image: url(../../public/img/bam1.jpg);
-        @include background-set;
-        height: 100%;
-    }
-    
-    .product6 {
-        background-image: url(../../public/img/body3.jpg);
-        @include background-set;
-        height: 100%;
-    }
-    
-    .product7 {
-        background-image: url(../../public/img/home6.jpg);
-        @include background-set;
-        height: 100%;
-    }
-    
-    .product8 {
-        background-image: url(../../public/img/p5.jpg);
-        @include background-set;
-        height: 100%;
-    }
-    
-    .product9 {
-        background-image: url(../../public/img/body5.jpg);
-        @include background-set;
-        height: 100%;
-    }
-    
-    .product10 {
-        background-image: url(../../public/img/Candle1.jpg);
-        @include background-set;
-        height: 100%;
-    }
+    // .swiper-wrapper {
+    //     width: 100%;
+    //     height: 400px;
+    //     background-color: pink;
+    // }
+
+    // .swiper-scrollbar {
+    //     border-radius: var(--swiper-scrollbar-border-radius, 10px);
+    //     position: relative;
+    //     touch-action: none;
+    //     background: rgba(255, 255, 255, 0) !important;
+    // }
+
+    // .swiper-scrollbar-drag {
+    //     height: 100%;
+    //     width: 100%;
+    //     position: relative;
+    //     border-radius: var(--swiper-scrollbar-border-radius, 10px);
+    //     left: 0;
+    //     top: 0;
+    //     background: rgb(255, 255, 255, 0.8) !important;
+    // }
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

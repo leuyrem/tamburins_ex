@@ -15,7 +15,6 @@ const Store = () => {
         <div className='hannam'>
           <Swiper
             className="mySwiper1"
-
             spaceBetween={0}
             scrollbar={{ hide: true, }}
             modules={[Scrollbar]}
@@ -84,7 +83,6 @@ const Store = () => {
         <div className='seongsu'>
           <Swiper
             className="mySwiper2"
-
             scrollbar={{ hide: true, }}
             modules={[Scrollbar]}
             breakpoints={{
@@ -134,7 +132,6 @@ const Store = () => {
         <div className='samcheong'>
           <Swiper
             className="mySwiper3"
-
             scrollbar={{ hide: true, }}
             modules={[Scrollbar]}
             breakpoints={{
@@ -175,7 +172,6 @@ const Store = () => {
         <div className='dosan'>
           <Swiper
             className="mySwiper4"
-
             scrollbar={{ hide: true, }}
             modules={[Scrollbar]}
             breakpoints={{
@@ -186,7 +182,6 @@ const Store = () => {
           >
             <SwiperSlide className='dosan_store1'>
               <video muted autoPlay loop>
-
                 <source src="/video/Dosan1.mp4" type="video/mp4" />
               </video>
             </SwiperSlide>
@@ -222,7 +217,6 @@ const Store = () => {
         <div className='sinsa'>
           <Swiper
             className="mySwiper5"
-
             scrollbar={{ hide: true, }}
             modules={[Scrollbar]}
             breakpoints={{
