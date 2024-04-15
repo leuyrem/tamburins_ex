@@ -41,19 +41,18 @@
 
         .item {
             text-align: center;
-             margin-bottom: 30px;
-
-             &:hover {
-                cursor: pointer;
-             }
-
+            margin-bottom: 30px;
+            cursor: pointer;
+            
             img {
                 border-radius: 40px;
                 height: 600px;
                 transition: all 0.2s linear;
+                padding: 3px;
 
                 &:hover {
                     transform: scale(0.9);
+                    border: 1px solid $a;
                 }
             }
             
@@ -101,6 +100,11 @@
         padding: 10px 80px;
         @include font-style;
         position: absolute;
+        cursor: pointer;
+
+        &:hover {
+            background-color: cadetblue;
+        }
 
         &::after {
             content: "";

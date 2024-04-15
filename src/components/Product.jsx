@@ -9,9 +9,6 @@ const Product = (props) => {
     const navigate = useNavigate();        
 
 
-
-
-
   return (
     <Col md={4} className='item' onClick={()=>{    
         navigate('/detail/' + tamburins.id)

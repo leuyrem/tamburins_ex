@@ -359,6 +359,7 @@ let data_all = [
   price: "₩ 120,000"   
 },
 
+
 {
   id: 30,
   category: "bam",
@@ -366,6 +367,61 @@ let data_all = [
   imgUrl: "/img/bam1.jpg",
   imgUrl_sub: "/img/bam1-1.jpg",
   content: "Sweet PumpkinㅣShiso LeafㅣCoconut Milk",   
+  type: "하얀 호박에서 느껴지는 청초하고 달콤한 향에 차조기잎과 블러드오렌지의 독특한 푸르름이 더해져 기분 좋은 놀라움을 선사합니다. 잘 여물어 진득해진 호박향과 진저의 스파이시함이 교차되어 독특한 조화를 이루고 뒤이어 밀려오는 크리미한 코코넛밀크는 부드러운 샌달우드와 함께 오묘한 잔상을 만들며 깊은 여운을 그려냅니다.", 
+  size: "6.5g", 
+  price: "₩ 46,500"   
+},
+{
+  id: 31,
+  category: "bam",
+  title: "PERFUME BALM HOLY METAL",   
+  imgUrl: "/img/bam2.jpg",
+  imgUrl_sub: "/img/bam2-1.jpg",
+  content: "Cypress LeafㅣCold MetalㅣWhite Musk",   
+  type: "우연히 발 딛은 신성한 유적지의 성전에서 느껴지는 깨끗하고 차분한 공기를 떠올리게 합니다. 푸른 측백나무 잎가지와 세이지의 조합에 깊이를 더해주는 인센스와 절제된 차가움을 지닌 금속성의 느낌이 어우러져 마치 정지된 시간의 순간을 맞이한 듯 신비한 느낌을 자아내고, 화이트 머스크와 우디노트가 기분 좋은 여운으로 어우러져 오랜 시간 은은하게 머무릅니다.", 
+  size: "6.5g", 
+  price: "₩ 46,500"   
+},
+{
+  id: 32,
+  category: "bam",
+  title: "PERFUME BALM CHAMO",   
+  imgUrl: "/img/bam3.jpg",
+  imgUrl_sub: "/img/bam3-1.jpg",
+  content: "Thick chamomile | Soft wood grain | Musk",   
+  type: "지중해의 푸릇한 기운을 받고 자란 베르가못의 청량한 향에 라임 카다멈의 신선하고 쌉싸래한 향이 더해져 따사로운 햇볕 아래 서서히 익어가는 청귤을 떠오르게 합니다. 뒤이어 샌달우드가 그려내는 부드러운 곡선의 잔 향은 주위에 은은하게 머물며 햇살 가득한 여름날의 따뜻한 기억을 그려냅니다.", 
+  size: "6.5g", 
+  price: "₩ 46,500"   
+},
+{
+  id: 33,
+  category: "bam",
+  title: "PERFUME BALM BERGA SANDAL",   
+  imgUrl: "/img/bam4.jpg",
+  imgUrl_sub: "/img/bam4-1.jpg",
+  content: "Bergamot in the Mediterranean | Bittersweet green tangerine | Sandalwood",   
+  type: "튤립의 첫 이름을 의미하는 라레는 새벽의 이슬을 머금은 청초한 푸른 사과를 한 입 베어 문 듯 청량하면서도 절제된 달콤함을 시작으로, 잔잔한 그린 플로럴의 향취가 화이트 튤립의 싱그러운 푸른 잎사귀를 떠오르게 합니다. 진득한 샌달우드에 스파이시한 무드의 레더와 미모사가 더해져 깊고 은은한 여운을 남깁니다.", 
+  size: "6.5g", 
+  price: "₩ 46,500"   
+},
+{
+  id: 34,
+  category: "bam",
+  title: "PERFUME BALM LALE",   
+  imgUrl: "/img/bam5.jpg",
+  imgUrl_sub: "/img/bam5-1.jpg",
+  content: "Green apple with dew | White tulip | Sandalwood",   
+  type: "스웨이드에 겹겹이 감싸진 듯한 부드러운 배의 과육에서 느껴지는 시원한 향과 갈바넘의 쌉싸름한 조합이 스 웨이드 페어만의 독특한 트위스트를 보여줍니다. 미들 노트의 오랜 시간 정성을 들여 숙성시킨 위스키가 시간의 깊이를 더하고, 앰버 머스크의 묵직한 무게감으로 맺어줍니다.", 
+  size: "6.5g", 
+  price: "₩ 46,500"   
+},
+{
+  id: 35,
+  category: "bam",
+  title: "PERFUME BALM SUEDE PEAR",   
+  imgUrl: "/img/bam6.jpg",
+  imgUrl_sub: "/img/bam6-1.jpg",
+  content: "Cool pear | Suede | Bittersweet Galbanum",   
   type: "하얀 호박에서 느껴지는 청초하고 달콤한 향에 차조기잎과 블러드오렌지의 독특한 푸르름이 더해져 기분 좋은 놀라움을 선사합니다. 잘 여물어 진득해진 호박향과 진저의 스파이시함이 교차되어 독특한 조화를 이루고 뒤이어 밀려오는 크리미한 코코넛밀크는 부드러운 샌달우드와 함께 오묘한 잔상을 만들며 깊은 여운을 그려냅니다.", 
   size: "6.5g", 
   price: "₩ 46,500"   

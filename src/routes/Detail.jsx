@@ -55,7 +55,8 @@ const Detail = (props) => {
                 <p className="type">{selproduct.type}</p>
                 <div className="more_product">
                   <Swiper modules={[Virtual]} spaceBetween={10} slidesPerView={5} virtual>
-                     {/* navigate('/detail/' + tamburins.id) */}
+                         {/* filterItem("hand&lip");
+                         navigate('/detail/' + relproduct.id) */}
                     {relproduct.map((rel, i) => (
                       <SwiperSlide key={rel} virtualIndex={i}>
                         {<img src={process.env.PUBLIC_URL + rel.imgUrl} width="100%" onClick={() => { }} />}
@@ -84,23 +85,21 @@ const Detail = (props) => {
           </Col>
         </Row>
 
-
-
-
-
-
         <div className="recommend">
           <div className='together'>
             <h4>고객님을 위한 추천 상품</h4>
             <Swiper 
               className="recommend_swiper"
-              spaceBetween={0}
+              spaceBetween={'20px'}
               slidesPerView={5}
               scrollbar={{ hide: true, }}
               modules={[Scrollbar]}
               breakpoints={{
                 1800: {
                   slidesPerView: 5,
+                },
+                1500: {
+                  slidesPerView: 4,
                 },
                 1200: {
                   slidesPerView: 3,
