@@ -93,7 +93,7 @@ const Section3 = () => {
                         <div className='img_ex6'></div>
                             <p className='location'>서울특별시 성동구 성수이로 20길 57</p>
                             <h4>코쿤 컬렉션</h4>
-                            <p className='date'>2021.10. 20 – 2021.11.21</p>
+                            <p className='date'>2021.10. 20 - 2021.11.21</p>
                         </div>
                     </Slider>
                 </div>

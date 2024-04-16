@@ -47,10 +47,7 @@
   margin-right: 25px;
 }
 
-.tab1 {
-
- 
-}
+.tab1 {}
 
 // .move1 {
 //      background-image: url(../../public/img/p1.jpg);
@@ -65,6 +62,13 @@
   border-radius: 50px;
   font-size: 14px;
   width: 250px;
+
+  &:focus {
+    z-index: 3;
+    border: 1px solid $a;
+    outline: 0;
+    box-shadow: none;
+  }
 }
 
 .login {

@@ -1,24 +1,13 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 
-const user = createSlice({
-    name: 'user',
-    initialState: {name: 'kim', age: 20},
-    reducer: {
-        changeName(state){
-            state.name='john kim'
-        },
-        increase(state, action){
-            state.age += action.payload
-        }
-    }
-})
+
 
 const cart = createSlice({
     name: 'cart',
     initialState: [
-        {id: 0, item: 'white', amount: 2},
-        {id: 2, item: 'black', amount: 1}
+        {imgUrl: '/img/perfume1.jpg', id: 0, item: 'EGG LIP BALM ROSE WOODY', content: "Grapefruit ㅣ Elegant Rose ㅣ Musk", size: "5g", price: '₩ 28,900', amount: 1},
+        // {id: 2, id: 0, item: 'EGG LIP BALM ROSE WOODY', content: "Grapefruit ㅣ Elegant Rose ㅣ Musk", size: "5g", price: '₩ 28,900', amount: 1}
     ],
 
     reducers: {
@@ -44,9 +33,6 @@ const cart = createSlice({
 export const { addCount, sortName, addItem } = cart.actions
 
 export default configureStore({
-    reducer: {user:user.reducer,
-              cart:cart.reducer,
-            },
+    reducer: {cart:cart.reducer}
 });
 
-export const {changeName, increase} = user.actions

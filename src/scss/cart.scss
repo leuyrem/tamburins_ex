@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import "fonts", "base";
 
-
+//producy_detail
 .cartWrap {
     width: 100%;
     height: auto;
@@ -11,8 +11,7 @@
 h2 {
     @include font-style;
     margin-top: 100px;
-    margin-bottom: 80px
-    
+    margin-bottom: 50px
 }
 
 .buying {
@@ -22,18 +21,120 @@ h2 {
 
 .bag {
     width: 70%;
+}
 
-  
-    .zip {
+.zip {
+    padding: 30px 0;
+    border-bottom: 1px solid $b;
+    display: flex;
+}
+
+.productImg {
+    width: 240px;
+    margin-right: 80px;
+}
+
+.shopping {
+    width: 50%;
+    padding: 23px 0;
+
+    .productItem {
+        @include font-style;
+        font-size: 22px;
+    }
+
+    .productContent {
+       padding-top: 10px;
+       padding-bottom: 50px;
+    }
+
+    .countWrap {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+    }
+
+    .count {
+        width: 120px;
+        @include box_border(1px, $a);
+        @include flex-between;
+        padding: 8px 15px;
+        margin-bottom: 50px;
+        margin-right: 50px;
+
+        button {
+            border: none;
+            background-color: transparent;
+        }
+    }
+
+    .productPrice {
+        font-size: 20px;
+        padding-top: 4px;
+    }
+
+    .tabs {
+        @include font-style;
+
+        button {
+        border: none;  
+        background-color: transparent;
+        margin-right: 60px; 
+        border-bottom: 1px solid $a;      
+        }
+
+    }
+
+}
+
+
+
+//payment
+.total {
+    width: 440px;
+    height: 500px;
+    background-color: rgba(182, 182, 182, 0.3);
+    position: sticky;
+    top: 200px;
+    padding: 40px 25px;
+
+    h4 {
+        @include font-style;
     }
 }
 
-.total {
-    width: 440px;
-    height: 600px;
-    background-color: rgba(182, 182, 182, 0.3);
+.payment {
+    font-size: 13px;
 
+    .order{
+        @include flex-between;
+        padding-top: 30px;
+    }
+    .ship {
+        @include flex-between;
+        padding-top: 10px;
+
+        span {
+            background-color: $b; 
+            padding: 5px 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            font-size: 11px
+        }
+    }
+    .all_order{
+        @include flex-between;
+        padding-top: 10px;
+    }
+
+        button {
+        width: 90%;
+        border: none;
+        background-color: $a;
+        color: $c;
+        padding: 5px 10px;
+        @include flex-mid;
+        margin-left: 5%;
+        margin-top: 50px;
+        margin-bottom: 40px;
+    }
 }
+
