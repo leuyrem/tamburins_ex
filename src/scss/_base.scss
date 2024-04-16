@@ -45,6 +45,12 @@ $f: #efefef;
     justify-content: space-between;
 }
 
+@mixin flex-top {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+}
+
 @mixin box_border($w, $color) {
     border: $w solid $color;
 }

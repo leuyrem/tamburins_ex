@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import "fonts", "base";
+
+
+.cartWrap {
+    width: 100%;
+    height: auto;
+    padding: 0 100px;
+}
+
+h2 {
+    @include font-style;
+    margin-top: 100px;
+    margin-bottom: 80px
+    
+}
+
+.buying {
+    @include flex-top;
+    flex-wrap: wrap;
+}
+
+.bag {
+    width: 70%;
+
+  
+    .zip {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.total {
+    width: 440px;
+    height: 600px;
+    background-color: rgba(182, 182, 182, 0.3);
+
+}
