@@ -44,8 +44,8 @@ h2 {
     }
 
     .productContent {
-       padding-top: 10px;
-       padding-bottom: 50px;
+        padding-top: 10px;
+        padding-bottom: 50px;
     }
 
     .countWrap {
@@ -75,14 +75,24 @@ h2 {
         @include font-style;
 
         button {
-        border: none;  
-        background-color: transparent;
-        margin-right: 60px; 
-        border-bottom: 1px solid $a;      
+            border: none;
+            background-color: transparent;
+            margin-right: 60px;
+            border-bottom: 1px solid $a;
+
+            &:hover {
+                border: 1px solid $a;
+                padding: 5px 10px;
+            }
+
+            &:active {
+                background-color: $a;
+                color: $c;
+                border: 1px solid $a;
+                padding: 5px 10px;
+            }
         }
-
     }
-
 }
 
 
@@ -90,8 +100,8 @@ h2 {
 //payment
 .total {
     width: 440px;
-    height: 500px;
-    background-color: rgba(182, 182, 182, 0.3);
+    height: auto;
+    background-color: rgb(230, 230, 230);
     position: sticky;
     top: 200px;
     padding: 40px 25px;
@@ -99,42 +109,190 @@ h2 {
     h4 {
         @include font-style;
     }
-}
 
-.payment {
-    font-size: 13px;
+    .payment {
+        font-size: 13px;
 
-    .order{
-        @include flex-between;
-        padding-top: 30px;
-    }
-    .ship {
-        @include flex-between;
-        padding-top: 10px;
-
-        span {
-            background-color: $b; 
-            padding: 5px 10px;
-            margin-left: 10px;
-            border-radius: 5px;
-            font-size: 11px
+        .order {
+            @include flex-between;
+            padding-top: 30px;
         }
-    }
-    .all_order{
-        @include flex-between;
-        padding-top: 10px;
-    }
+
+        .ship {
+            @include flex-between;
+            padding-top: 10px;
+
+            span {
+                background-color: $b;
+                padding: 5px 10px;
+                margin-left: 10px;
+                border-radius: 5px;
+                font-size: 11px
+            }
+        }
+
+        .all_order {
+            @include flex-between;
+            padding-top: 10px;
+        }
 
         button {
-        width: 90%;
+            width: 90%;
+            border: none;
+            background-color: $a;
+            color: $c;
+            padding: 10px 10px;
+            @include flex-mid;
+            margin-left: 5%;
+            margin-top: 50px;
+            margin-bottom: 150px;
+
+            &:hover {
+                background-color: $c;
+                @include box_border(1px, $a);
+                color: $a;
+                opacity: 0.8;
+            }
+        }
+
+        .btn {
+            &:active {
+                @include box_border(1px, $a);
+                background-color: $d;
+                color: $c;
+            }
+        }
+
+    }
+
+    .addbag {
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    .accordion-item {
+        color: var(--bs-accordion-color);
+        background-color: none;
         border: none;
-        background-color: $a;
-        color: $c;
-        padding: 5px 10px;
-        @include flex-mid;
-        margin-left: 5%;
-        margin-top: 50px;
-        margin-bottom: 40px;
+        background-color: transparent;
+        margin-top: -100px;
+    }
+
+    .accordion-button {
+        width: 100%;
+        background-color: transparent !important;
+        font-size: 13px;
+
+        &:focus {
+            z-index: 3;
+            border: none;
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+
+    .accordion-button:not(.collapsed) {
+        color: $a;
+        background-color: none;
+        box-shadow: none;
+    }
+
+    .shoppingBag_S {
+        display: flex;
+        margin-bottom: 25px;
+        border-bottom: 1px solid $b;
+        padding-bottom: 25px;
+
+        .bag_wrap {
+            width: 100px;
+        }
+
+        .bag_size {
+            margin-left: 30px;
+            font-size: 14px;
+
+            .diy {
+                line-height: 30px;
+            }
+
+            .drop {
+                 display: flex;
+            }
+
+            .btn-success {
+                background-color: transparent !important;
+                border: none;
+                border-radius: 0px;
+                padding: 0px 15px;
+                color: $a;
+                font-size: 13px;
+                margin-top: -4px;
+            }
+
+            .dropdown-menu {
+                min-width: 25px;
+                border-radius: 0px;
+            }
+
+            .dropdown-item {
+                &:active {
+                    background-color: none;
+                }
+
+                &:hover {
+                    background-color: $a;
+                    color: $c;
+                }
+            }
+        }
+    }
+
+    .shoppingBag_M {
+        display: flex;
+        margin-bottom: 25px;
+        border-bottom: 1px solid $b;
+        padding-bottom: 25px;
+
+        .bag_wrap {
+            width: 100px;
+        }
+
+        .bag_size {
+            margin-left: 30px;
+            font-size: 14px;
+
+            .diy {
+                line-height: 30px;
+            }
+
+            .drop {
+                display: flex;
+            }
+
+            .btn-success {
+                background-color: transparent !important;
+                border: none;
+                border-radius: 0px;
+                padding: 0px 15px;
+                color: $a;
+                font-size: 13px;
+                margin-top: -4px;
+            }
+
+            .dropdown-menu {
+                min-width: 25px;
+                border-radius: 0px;
+            }
+
+            .dropdown-item {
+                &:active {
+                    background-color: none;
+                }
+
+                &:hover {
+                    background-color: $a;
+                    color: $c;
+                }
+            }
+        }
     }
 }
-

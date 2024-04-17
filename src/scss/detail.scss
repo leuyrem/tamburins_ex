@@ -125,6 +125,8 @@
         color: var(--bs-accordion-color);
         background-color: none;
         border: none;
+        margin-bottom: -80px;
+        margin-top: -60px;
     }
 
     .accordion-button {
@@ -133,7 +135,6 @@
         background-color: #fff !important;
         border: none !important;
         font-size: 13px;
-        padding: 10px 0;
     }
 
     .accordion-button {

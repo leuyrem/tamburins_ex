@@ -16,10 +16,6 @@ import 'swiper/css';
 import 'swiper/css/scrollbar';
 
 
-
-
-
-
 const Detail = (props) => {
   const { tamburins, setTamburins } = props;
   const { id } = useParams();
@@ -36,9 +32,6 @@ const Detail = (props) => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
-
-
 
 
   const slides = Array.from({ length: 1000 }).map(
@@ -73,9 +66,7 @@ const Detail = (props) => {
                 <div className="more_product">
                   <Swiper modules={[Virtual]} spaceBetween={10} slidesPerView={5} virtual>
                     {relproduct.map((rel, i) => (
-                      <SwiperSlide key={rel} virtualIndex={i} onClick={() => {
-                        navigate('/detail/' + rel.id)
-                      }}>
+                      <SwiperSlide key={rel} virtualIndex={i} onClick={() => {navigate('/detail/' + rel.id)}}>
                         {<img src={process.env.PUBLIC_URL + rel.imgUrl} width="100%" onClick={() => { }} />}
                         {rel.title}
                       </SwiperSlide>
@@ -85,6 +76,7 @@ const Detail = (props) => {
                 <p className="size">사이즈</p>
                 <p className="gram"><span>{selproduct.size}</span></p>
                 <Button variant="dark" onClick={moveCart}>쇼핑백에 추가</Button>
+
                 <Accordion>
                   <Accordion.Item eventKey="0">
                     <Accordion.Header>제품 상세정보</Accordion.Header>
