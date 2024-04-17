@@ -17,13 +17,10 @@ import Accordion from 'react-bootstrap/Accordion';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 const Cart = (props) => {
-
-
-    
     let total = ()=>{
         let sum = 0;
         for(let i in cart){
-            sum += cart[i].price * cart[i].count
+            sum += cart[i].price * cart[i].amount
         }
         return sum
     }
@@ -31,7 +28,7 @@ const Cart = (props) => {
     let [deliveryFee, setDeliveryFee] = useState(2500)
     useEffect(()=>{
         function fee() {
-            if (total() >= 50000) {
+            if (total() >= 30000) {
                 setDeliveryFee(0)
             } else {
                 setDeliveryFee(2500)
@@ -41,14 +38,14 @@ const Cart = (props) => {
     })
 
 
-    const state = useSelector(state => state);
-
     const { tamburins, setTamburins } = props;
+    const state = useSelector(state => state);    
     const cart = useSelector(state => state.cart);
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
     const origin = data_all;
+
+
 
     return (
         <>
@@ -62,7 +59,6 @@ const Cart = (props) => {
                                     <div className='productImg' onClick={() => { navigate('/detail/' + v.id) }}>
                                         <img src={process.env.PUBLIC_URL + v.imgUrl} width='100%' />
                                     </div>
-
                                     <div className='shopping'>
                                         <div className='productItem'>{v.item}</div>
                                         <div className='productContent'>{v.content}</div>
@@ -76,7 +72,7 @@ const Cart = (props) => {
                                                     dispatch(addCount(v.id))
                                                 }>+</button>
                                             </div>
-                                            <div className='productPrice'>{v.price}</div>
+                                            <div className='productPrice'>₩ {v.price.toLocaleString()}</div>
                                         </div>
                                         <div className='tabs'>
                                             <button>Move to favorites</button>
@@ -96,27 +92,22 @@ const Cart = (props) => {
                         <div className='payment'>
                             <div className='order'>
                                 <p>주문금액</p>
-                                <p>₩ {total()}</p>
+                                <p className='order_price'>₩ {total().toLocaleString()}</p>
                             </div>
-
                             <div className='ship'>
                                 <p>배송비 <span>3만원 이상 구매시 무료</span></p>
-                                <p>₩ {deliveryFee}</p>
+                                <p className='order_price'>₩ {deliveryFee.toLocaleString()}</p>
                             </div>
-
                             <div className='all_order'>
                                 <p>총 주문금액</p>
-                                <p>₩ {(total() + deliveryFee)}</p>
+                                <p className='order_price'>₩ {(total() + deliveryFee).toLocaleString()}</p>
                             </div>
                             <Button variant="dark">결제하기</Button>
-
-
-
 
                         </div>
                         <Accordion>
                             <Accordion.Item eventKey="0">
-                                <Accordion.Header className='addbag'>쇼핑백을 추가하시겠습니까?</Accordion.Header>
+                                <Accordion.Header>ADD SHOPPINGBAG</Accordion.Header>
                                 <Accordion.Body>
                                     <div className='shoppingBag_S'>
                                         <div className='bag_wrap'><img src={process.env.PUBLIC_URL + '/img/Thumbnail_ShoppingBag_S.jpg'} width='100%' /></div>

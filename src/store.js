@@ -1,12 +1,9 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
-
-
-
 const cart = createSlice({
     name: 'cart',
     initialState: [
-        {imgUrl: '/img/perfume1.jpg', id: 0, item: 'EGG LIP BALM ROSE WOODY', content: "Grapefruit ㅣ Elegant Rose ㅣ Musk", size: "5g", price: '₩ 28,900', amount: 1}
+        {imgUrl: '/img/p1.jpg', id: 0, item: 'EGG LIP BALM ROSE WOODY', content: "Grapefruit ㅣ Elegant Rose ㅣ Musk", size: "5g", price: 28900, amount: 1}
     ],
 
     reducers: {
@@ -23,15 +20,14 @@ const cart = createSlice({
             }
         },
         addItem(state, action) {
-            if(action.payload.type === 'addobj') {
-                const idx = state.findIndex(a => a.id === action.payload.id)
-                if(idx >= 0) {
-                    state[idx].amount++;
-                } else {
-                    state.push(action.payload);
-                }
-            } else {
-                state.push(action.payload)
+            let idx = state.findIndex(a => a.id == action.payload.id) 
+            let stateId = action.payload.id
+            if(stateId === 0 || stateId === 2){
+              if(action.payload.id === state[idx].id){
+                state[idx].amount++
+              }
+            }else{
+              state.push(action.payload)
             }
         },
         deleteItem(state, action) {

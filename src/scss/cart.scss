@@ -69,6 +69,7 @@ h2 {
     .productPrice {
         font-size: 20px;
         padding-top: 4px;
+        font-weight: 700;
     }
 
     .tabs {
@@ -100,7 +101,7 @@ h2 {
 //payment
 .total {
     width: 440px;
-    height: auto;
+    height: 935px;
     background-color: rgb(230, 230, 230);
     position: sticky;
     top: 200px;
@@ -111,7 +112,11 @@ h2 {
     }
 
     .payment {
-        font-size: 13px;
+        font-size: 15px;
+
+        .order_price {
+            font-weight: 700;
+        }
 
         .order {
             @include flex-between;
@@ -165,9 +170,7 @@ h2 {
 
     }
 
-    .addbag {
-        font-family: 'Noto Sans KR', sans-serif;
-    }
+  
 
     .accordion-item {
         color: var(--bs-accordion-color);
@@ -180,7 +183,6 @@ h2 {
     .accordion-button {
         width: 100%;
         background-color: transparent !important;
-        font-size: 13px;
 
         &:focus {
             z-index: 3;

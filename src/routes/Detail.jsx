@@ -40,7 +40,7 @@ const Detail = (props) => {
 
   const moveCart = () => {
     dispatch(addItem({
-      id: selproduct.id, imgUrl: selproduct.imgUrl, item: selproduct.title
+      id: selproduct.id, imgUrl: selproduct.imgUrl, item: selproduct.title, content: selproduct.content
       , price: selproduct.price, amount: 1
     }));
     navigate('/cart');
@@ -60,7 +60,7 @@ const Detail = (props) => {
             <div className="info">
               <div className="product_detail">
                 <h4 className="title">{selproduct.title}</h4>
-                <p className="price">{selproduct.price}</p>
+                <p className="price">₩ {selproduct.price.toLocaleString()}</p>
                 <p className="content">{selproduct.content}</p>
                 <p className="type">{selproduct.type}</p>
                 <div className="more_product">

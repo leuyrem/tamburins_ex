@@ -64,12 +64,13 @@
             .item_c {
                 @include item_c;
                 margin-top: 10px;
-                font-size: 1rem
+                font-size: 1rem;
             }
 
             .item_p {
                 @include item_p;
-                margin-top: 10px;
+                margin-top: -10px;
+                font-size: 20px;
             }
         }
     }
