@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "fonts", "base";
+@import "fonts", "base", "mediaquery";
 
 /* 헤더 */
 .head_banner {
@@ -41,20 +41,19 @@
 .nav-link {
   color: #000 !important;
   font-weight: 500;
+
+  @include common_two {
+    margin-right: -10px;
+  }
 }
 
 .nav-item {
-  margin-right: 25px;
+  margin-right: 24px;
+
+  @include common_three {
+    margin-left: 10px;
+  }
 }
-
-.tab1 {}
-
-// .move1 {
-//      background-image: url(../../public/img/p1.jpg);
-//     @include background-set;
-//     width: 200px;
-//     height: 200px; 
-// }
 
 .search {
   border: none;
@@ -62,6 +61,7 @@
   border-radius: 50px;
   font-size: 14px;
   width: 250px;
+  margin-right: 10px;
 
   &:focus {
     z-index: 3;
@@ -69,11 +69,48 @@
     outline: 0;
     box-shadow: none;
   }
+
+  @include common_one {
+    display: none;
+  }
+}
+
+.cart {
+  margin: auto 10px;
+
+  @include common_three {
+    margin-top: 20px;
+  }
 }
 
 .login {
-  margin: 0 20px;
+  margin: auto 20px;
+
+  @include common_three {
+    margin-top: 20px;
+  }
 }
+
+//햄버거버튼
+.navbar-toggler {
+  border: none;
+  border-radius: 0px;
+
+  &:focus {
+    text-decoration: none;
+    outline: none;
+    box-shadow:none;
+  }
+}
+
+.navbar-nav  {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+
 
 // 푸터
 .footer {

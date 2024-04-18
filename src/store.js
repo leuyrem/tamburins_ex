@@ -11,7 +11,7 @@ const cart = createSlice({
             const idx = state.findIndex(a => a.id === action.payload)
             ++state[idx].amount;
         },
-        deleteCount(state, action) {
+        minusCount(state, action) {
             const idx = state.findIndex(a => a.id === action.payload)
             state[idx].amount--
             if (state[idx].amount < 1) {
@@ -19,27 +19,34 @@ const cart = createSlice({
                 state[idx].amount = 1;
             }
         },
-        addItem(state, action) {
+        addItem(state, action) { 
             let idx = state.findIndex(a => a.id == action.payload.id) 
-            let stateId = action.payload.id
-            if(stateId === 0 || stateId === 2){
+            if(idx >= 0){
               if(action.payload.id === state[idx].id){
                 state[idx].amount++
               }
             }else{
               state.push(action.payload)
             }
+            
         },
         deleteItem(state, action) {
             const idx = state.findIndex(a => a.id === action.payload)
             alert(`'${state[idx].item}' 상품을 삭제하시겠습니까?`)
             state.splice(idx, 1)
+        },
+        deleteCheckItem: (state, action) => {
+            state.items =state.items.filter(
+                (item) => item.id !== action.payload
+            )
         }
     }
 });
 
 
-export const { addCount, deleteCount, addItem, deleteItem } = cart.actions
+export const { addCount, minusCount, addItem, deleteItem, deleteCheckItem } = cart.actions
+
+
 
 export default configureStore({
     reducer: {cart:cart.reducer}

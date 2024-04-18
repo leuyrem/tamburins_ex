@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "fonts", "base";
+@import "fonts", "base", "mediaquery";
 
 //tab_menu
 .mid_section {
@@ -30,6 +30,16 @@
         padding: 10px 20px;
         font-size: 20px;
     }
+
+    @include section_one {
+        flex-wrap: wrap;
+
+        Button {
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            font-size: 19px;
+        }
+    }
 }
 
 .menu_list {
@@ -43,7 +53,7 @@
             text-align: center;
             margin-bottom: 30px;
             cursor: pointer;
-            
+
             img {
                 border-radius: 40px;
                 height: 600px;
@@ -55,7 +65,7 @@
                     border: 1px solid $a;
                 }
             }
-            
+
             h4 {
                 @include font-style;
                 margin-top: 30px;
@@ -72,8 +82,34 @@
                 margin-top: -10px;
                 font-size: 20px;
             }
+
+            @include section_one {
+                img {
+                    height: 70%;
+                }
+    
+                h4 {
+                    @include font-style;
+                    margin-top: 20px;
+                    font-size: 17px
+                }
+    
+                .item_c {
+                    @include item_c;
+                    margin-top: 10px;
+                    font-size: 15px;
+                }
+    
+                .item_p {
+                    @include item_p;
+                    margin-top: -10px;
+                    font-size: 17px;
+                }
+            }
         }
     }
+
+
 }
 
 //poster
@@ -135,4 +171,6 @@
         background-size: cover;
         background-position: center;
     }
+
+
 }

@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+//common
+$common_a: 1500px;
+$common_b: 1200px;
+$common_c: 1199px;
+
+
+@mixin common_one {
+    @media (max-width: $common_a){
+        @content;
+    }
+}
+
+@mixin common_two {
+    @media (max-width: $common_b) and (min-width: $common_a){
+        @content;
+    }
+}
+
+@mixin common_three {
+    @media (max-width: $common_c){
+        @content;
+    }
+}
+
+
+//section1
+$one_a: 1460px;
+$one_b: 910px;
+$one_c: 500px;
+
+@mixin section_one {
+    @media (max-width: $common_a){
+        @content;
+    }
+}
+
+@mixin section_two {
+    @media (max-width: $one_b) and (min-width: $one_a){
+        @content;
+    }
+}
+
+@mixin section_three {
+    @media (min-width: $one_c){
+        @content;
+    }
+}
+

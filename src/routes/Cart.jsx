@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 
-import { addCount, deleteCount, deleteItem } from '../store.js';
+import { addCount, minusCount, deleteItem } from '../store.js';
 import data_all from "../data_all";
 import Product from "../components/Product";
 import '../scss/cart.scss';
@@ -37,7 +37,6 @@ const Cart = (props) => {
         fee()
     })
 
-
     const { tamburins, setTamburins } = props;
     const state = useSelector(state => state);    
     const cart = useSelector(state => state.cart);
@@ -45,7 +44,7 @@ const Cart = (props) => {
     const navigate = useNavigate();
     const origin = data_all;
 
-
+    
 
     return (
         <>
@@ -65,7 +64,7 @@ const Cart = (props) => {
                                         <div className='countWrap'>
                                             <div className='count'>
                                                 <button onClick={() =>
-                                                    dispatch(deleteCount(v.id))
+                                                    dispatch(minusCount(v.id))
                                                 }>-</button>
                                                 <div className='productCount'>{v.amount}</div>
                                                 <button onClick={() =>
