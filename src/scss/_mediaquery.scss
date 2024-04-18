@@ -3,7 +3,7 @@
 //common
 $common_a: 1500px;
 $common_b: 1200px;
-$common_c: 1199px;
+$common_c: 1220px;
 
 
 @mixin common_one {
@@ -25,13 +25,22 @@ $common_c: 1199px;
 }
 
 
-//section1
+//section
+$one_video: 1850px;
 $one_a: 1460px;
 $one_b: 910px;
 $one_c: 500px;
 
+//비디오 부분만
+@mixin section_video {
+    @media (max-width: $one_a) and (min-width: $one_video){
+        @content;
+    }
+}
+
+
 @mixin section_one {
-    @media (max-width: $common_a){
+    @media (max-width: $one_a){
         @content;
     }
 }
