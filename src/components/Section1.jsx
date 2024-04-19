@@ -26,8 +26,8 @@ const Section1 = () => {
         </Col>
       </Row>
       <div className='midtxt'>
-        <p className='mid2'>Take the fragrant journey within our <br />
-        space filled with warmth from color <br />
+        <p className='mid2'>Take the fragrant journey within our 
+        space filled with warmth from color 
         harmony of turquoise and gentle<br />inspirations.</p>
       </div>
     </div>

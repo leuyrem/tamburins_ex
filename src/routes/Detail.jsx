@@ -51,12 +51,12 @@ const Detail = (props) => {
     <>
       <div className='detailWrap'>
         <Row className="detail_inner">
-          <Col lg={6} className='product'>
+          <Col md={6} className='product'>
             <img src={selproduct.imgUrl} width="100%" />
             <img src={selproduct.imgUrl_sub} width="100%" />
           </Col>
 
-          <Col lg={6} className='buy'>
+          <Col md={6} className='buy'>
             <div className="info">
               <div className="product_detail">
                 <h4 className="title">{selproduct.title}</h4>
@@ -64,7 +64,30 @@ const Detail = (props) => {
                 <p className="content">{selproduct.content}</p>
                 <p className="type">{selproduct.type}</p>
                 <div className="more_product">
-                  <Swiper modules={[Virtual]} spaceBetween={10} slidesPerView={5} virtual>
+                  <Swiper 
+                  modules={[Virtual]} 
+                  spaceBetween={10} 
+                  slidesPerView={5} 
+                  virtual
+                  breakpoints={{
+                    1800: {
+                      slidesPerView: 5,
+                    },
+                    1500: {
+                      slidesPerView: 4,
+                    },
+                    1200: {
+                      slidesPerView: 3,
+                    },
+                    768: {
+                      slidesPerView: 3,
+                    },
+                    500: {
+                      slidesPerView: 1,
+                    },
+                  }}
+                  >
+
                     {relproduct.map((rel, i) => (
                       <SwiperSlide key={rel} virtualIndex={i} onClick={() => {navigate('/detail/' + rel.id)}}>
                         {<img src={process.env.PUBLIC_URL + rel.imgUrl} width="100%" onClick={() => { }} />}

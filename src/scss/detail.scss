@@ -1,21 +1,21 @@
 @charset "utf-8";
-@import "fonts", "base";
+@import "fonts", "base", "mediaquery";
 
 .detailWrap {
     width: 100%;
     height: auto;
-    position: relative;
 }
 
 .detail_inner {
-    width: 100%;
     margin-top: -150px;
 }
 
 .product {
-    width: 950px;
-    --bs-gutter-x: 0;
     z-index: -100;
+
+    @include detail_four {
+        width: 100%;
+    }
 }
 
 .buy {
@@ -29,8 +29,18 @@
 }
 
 .product_detail {
-    height: auto;
     padding: 180px 150px;
+
+    @include detail_two {
+        padding: 140px 100px;
+    }
+    @include detail_three {
+        padding: 120px 120px;
+    }
+    @include detail_four {
+        padding: 120px 170px;
+        width: 200%;
+    }
 
     .title {
         @include font-style;
@@ -123,8 +133,6 @@
     }
 
     //product details
-
-
     .accordion-item {
         color: var(--bs-accordion-color);
         background-color: none;

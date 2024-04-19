@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "fonts", "base";
+@import "fonts", "base", "mediaquery";
 
 
 //슬라이드
@@ -15,6 +15,18 @@
         bottom: 0;
         padding: 0;
     }
+
+    @include section_video3 {
+        &::before {
+            content: "";
+            background-color: $e;
+            width: 100%;
+            height: 60%;
+            position: absolute;
+            bottom: 0;
+            padding: 0;
+        }
+    }
 }
 
 .slider-container {
@@ -24,6 +36,10 @@
         @include font-style;
         font-size: 30px;
         margin: 35px 0;
+    }
+
+    @include section_video3 {
+        padding: 80px 100px;
     }
 }
 
@@ -67,6 +83,10 @@
     left: auto;
     width: 40px;
     height: 40px;
+
+    @include section_video3 {
+        display: none;
+    }
 }
 
 .slick-next::after {
@@ -79,6 +99,10 @@
     right: 0;
     width: 40px;
     height: 40px;
+
+    @include section_video3 {
+        display: none;
+    }
 }
 
 .slider {
@@ -105,6 +129,10 @@
         background-image: url(../../public/img/ex1.jpg);
         @include background-set;
         height: 400px;
+
+        @include section_video3 {
+            height: 250px;
+        }
     }
 }
 
@@ -113,6 +141,10 @@
         background-image: url(../../public/img/ex2.jpg);
         @include background-set;
         height: 400px;
+
+        @include section_video3 {
+            height: 250px;
+        }
     }
 }
 
@@ -121,6 +153,10 @@
         background-image: url(../../public/img/ex3.jpg);
         @include background-set;
         height: 400px;
+
+        @include section_video3 {
+            height: 250px;
+        }
     }
 }
 
@@ -129,6 +165,10 @@
         background-image: url(../../public/img/ex4.jpg);
         @include background-set;
         height: 400px;
+
+        @include section_video3 {
+            height: 250px;
+        }
     }
 }
 
@@ -137,6 +177,10 @@
         background-image: url(../../public/img/ex5.jpg);
         @include background-set;
         height: 400px;
+
+        @include section_video3 {
+            height: 250px;
+        }
     }
 }
 
@@ -145,5 +189,9 @@
         background-image: url(../../public/img/ex6.jpg);
         @include background-set;
         height: 400px;
+
+        @include section_video3 {
+            height: 250px;
+        }
     }
 }
