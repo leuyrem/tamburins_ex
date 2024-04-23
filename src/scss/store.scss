@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import "fonts", "base";
+@import "fonts", "base", "mediaquery";
 
 .store_section {
     width: 100%;
@@ -7,7 +7,7 @@
 
 
 .swiper-slide {
-    flex-shrink: 1;
+    flex-shrink: none;
     cursor: grab;
 }
 
@@ -21,6 +21,8 @@
     padding: 0;
     z-index: 10;
     display: block;
+
+
 }
 
 .swiper-scrollbar {
@@ -78,6 +80,10 @@
     margin: 0 auto;
     padding-top: 70px;
     padding-bottom: 80px;
+
+    @include detail_two {
+        width: 50%;
+    }
 }
 
 .hannam_store1 {

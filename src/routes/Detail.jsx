@@ -83,7 +83,10 @@ const Detail = (props) => {
                       slidesPerView: 3,
                     },
                     500: {
-                      slidesPerView: 1,
+                      slidesPerView: 2,
+                    },
+                    320: {
+                      slidesPerView: 2,
                     },
                   }}
                   >

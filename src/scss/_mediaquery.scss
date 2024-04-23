@@ -30,7 +30,7 @@ $one_video: 1850px;
 $one_a: 1460px;
 $one_b: 1150px;
 $one_c: 500px;
-
+$one_e: 499px;
 
 @mixin section_one {
     @media (min-width: $one_a){
@@ -46,6 +46,12 @@ $one_c: 500px;
 
 @mixin section_three {
     @media (min-width: $one_c) and (max-width: $one_b){
+        @content;
+    }
+}
+
+@mixin section_four {
+    @media (max-width: $one_c){
         @content;
     }
 }
@@ -69,11 +75,12 @@ $one_c: 500px;
     }
 }
 
-//detail
+//detail //store //cart
 $de_a: 1840px;
 $de_b: 1460px;
 $de_c: 1065px;
-$de_d: 500px;
+$de_d: 770px;
+$de_e: 350px;
 
 @mixin detail_one {
     @media (min-width: $de_a){
@@ -95,6 +102,18 @@ $de_d: 500px;
 
 @mixin detail_four {
     @media (min-width: $de_d) and (max-width: $de_c){
+        @content;
+    }
+}
+
+@mixin detail_five {
+    @media (min-width: $de_e) and (max-width: $de_d){
+        @content;
+    }
+}
+
+@mixin detail_six {
+    @media (max-width: $de_e){
         @content;
     }
 }

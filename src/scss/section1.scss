@@ -31,6 +31,9 @@
         height: 744px; 
         margin-bottom: -90px; 
     }
+    @include section_four {
+        margin-bottom: -220px; 
+    }
 
     .graybox {
         height: 450px;
@@ -110,11 +113,22 @@
             bottom: 5px;
             left: 40px;
         }
+        
+        @include section_three {
+            p {
+                font-size: 1.5rem;
+                left: 20px;
+            }
+        }
+        @include section_four {
+            height: 150px;
 
-        // @include section_three {
-        //     width: 100%;
-        //     height: 280px;
-        // }
+            p {
+                font-size: 1.2rem;
+                left: 20px;
+            }
+        }
+
     }
 
     .smallBox2 {
@@ -132,6 +146,21 @@
             position: absolute;
             bottom: 5px;
             left: 40px;
+        }
+
+        @include section_three {
+            p {
+                font-size: 1.5rem;
+                left: 20px;
+            }
+        }
+        @include section_four {
+            height: 150px;
+
+            p {
+                font-size: 1.2rem;
+                left: 20px;
+            }
         }
     }
 }

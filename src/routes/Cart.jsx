@@ -17,16 +17,16 @@ import Accordion from 'react-bootstrap/Accordion';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 const Cart = (props) => {
-    let total = ()=>{
+    let total = () => {
         let sum = 0;
-        for(let i in cart){
+        for (let i in cart) {
             sum += cart[i].price * cart[i].amount
         }
         return sum
     }
 
     let [deliveryFee, setDeliveryFee] = useState(2500)
-    useEffect(()=>{
+    useEffect(() => {
         function fee() {
             if (total() >= 30000) {
                 setDeliveryFee(0)
@@ -38,13 +38,13 @@ const Cart = (props) => {
     })
 
     const { tamburins, setTamburins } = props;
-    const state = useSelector(state => state);    
+    const state = useSelector(state => state);
     const cart = useSelector(state => state.cart);
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const origin = data_all;
 
-    
+
 
     return (
         <>
@@ -158,7 +158,7 @@ const Cart = (props) => {
                                         <Form.Control
                                             type="search"
                                             placeholder="프로모션 코드를 입력하세요."
-                                            className="search"
+                                            className="add_search"
                                             aria-label="Search"
                                         />
                                     </Form>
@@ -171,7 +171,7 @@ const Cart = (props) => {
                                         <Form.Control
                                             type="search"
                                             placeholder="메세지를 입력하세요."
-                                            className="search"
+                                            className="add_search"
                                             aria-label="Search"
                                         />
                                     </Form>
@@ -182,45 +182,45 @@ const Cart = (props) => {
 
                     </div>
                 </div>
-
-
-                <div className="recommend">
-                    <div className='together'>
-                        <h4>MAYBE YOU LIKE</h4>
-                        <Swiper
-                            className="recommend_swiper"
-                            spaceBetween={'20px'}
-                            slidesPerView={5}
-                            scrollbar={{ hide: true, }}
-                            modules={[Scrollbar]}
-                            breakpoints={{
-                                1800: {
-                                    slidesPerView: 5,
-                                },
-                                1500: {
-                                    slidesPerView: 4,
-                                },
-                                1200: {
-                                    slidesPerView: 3,
-                                },
-                                768: {
-                                    slidesPerView: 2,
-                                },
-                                200: {
-                                    slidesPerView: 1,
-                                },
-                            }} >
-
-                            {origin.map((tamburin, i) => (
-                                <SwiperSlide className="recommend_slide" key={tamburins} virtualIndex={i}>
-                                    <Product tamburins={tamburin} i={i} />
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                    </div>
-                </div>
-
             </div>
+
+            <div className="recommend">
+                <div className='together'>
+                    <h4>MAYBE YOU LIKE</h4>
+                    <Swiper
+                        className="recommend_swiper"
+                        spaceBetween={'20px'}
+                        slidesPerView={5}
+                        scrollbar={{ hide: true, }}
+                        modules={[Scrollbar]}
+                        breakpoints={{
+                            1800: {
+                                slidesPerView: 5,
+                            },
+                            1500: {
+                                slidesPerView: 4,
+                            },
+                            1200: {
+                                slidesPerView: 3,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                            },
+                            200: {
+                                slidesPerView: 1,
+                            },
+                        }} >
+
+                        {origin.map((tamburin, i) => (
+                            <SwiperSlide className="recommend_slide" key={tamburins} virtualIndex={i}>
+                                <Product tamburins={tamburin} i={i} />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            </div>
+
+
         </>
     )
 }

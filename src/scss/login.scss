@@ -1,9 +1,177 @@
 @charset "utf-8";
-@import "fonts", "base";
+@import "fonts", "base", "mediaquery";
 
 
 .logWrap {
     width: 375px;
     display: block;
-    margin: 0 auto;
+    margin: 150px auto 300px;
+
+    .nav {
+        justify-content: space-around;
+    }
+
+    .nav-tabs {
+        border-bottom: 1px solid $b;
+
+        .nav-item {
+            margin-right: 0;
+        }
+
+        .nav-link {
+            font-size: 13px;
+            border-color: transparent;
+           
+            &:active {
+                border-bottom: 1px solid $a;
+            }
+        
+            &:focus {
+                border-color: transparent;
+                border-bottom: 1px solid $a;
+            }
+        }
+    }
+
+    .form-control {
+        font-size: 11px;
+        padding: 10px 10px;
+        border: 1px solid $a;
+        font-weight: 500;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .start {
+        width: 100%;
+        font-size: 13px;
+        margin-top: 20px;
+        padding: 10px 0;
+
+        &:hover {
+            background-color: $c;
+            @include box_border(1px, $a);
+            color: $a;
+            opacity: 0.8;
+        }
+
+        &:active {
+            @include box_border(1px, $a);
+            background-color: $d;
+            color: $c;
+        }
+    }
+
+    .find {
+        padding-top: 10px;
+        padding-bottom: 50px;
+        font-size: 11px;
+        display: flex;
+        justify-content: center;
+
+        p {
+            margin: 0px 15px;
+        }
+    }
+
+    .kakao {
+        width: 100%;
+        font-size: 13px;
+        margin-bottom: 10px;
+        background-color: #f7e600;
+        border: none;
+        position: relative;
+        padding: 10px 0;
+        color: $a;
+        font-weight: 600;
+
+        img {
+            margin-right: 10px;
+            position: absolute;
+            top: 12px;
+            left: 15px;
+        }
+
+        &:active {
+            @include box_border(1px, $a);
+            background-color: $d;
+            color: $c;
+        }
+    }
+
+    .naver {
+        width: 100%;
+        font-size: 13px;
+        background-color: #03c75a;
+        border: none;
+        position: relative;
+        padding: 10px 0;
+        font-weight: 600;
+
+        img {
+            margin-right: 10px;
+            position: absolute;
+            top: 12px;
+            left: 15px;
+        }
+
+        &:active {
+            @include box_border(1px, $a);
+            background-color: $d;
+            color: $c;
+        }
+    }
+
+
+    .number {
+        font-size: 11px;
+        margin-bottom: 7px;
+    }
+
+    .orderFind {
+        width: 100%;
+        font-size: 13px;
+        padding: 10px 0;
+        margin-bottom: 10px;
+        font-weight: 600;
+
+        &:hover {
+            background-color: $c;
+            @include box_border(1px, $a);
+            color: $a;
+            opacity: 0.8;
+        }
+
+        &:active {
+            @include box_border(1px, $a);
+            background-color: $d;
+            color: $c;
+        }
+    }
+
+    .join {
+        width: 100%;
+        font-size: 13px;
+        padding: 10px 0;
+        background-color: $c;
+        color: $a;
+        font-weight: 600;
+
+        &:hover {
+            background-color: $c;
+            @include box_border(1px, $a);
+            color: $a;
+            opacity: 0.8;
+        }
+
+
+        &:active {
+            @include box_border(1px, $a);
+            background-color: $d;
+            opacity: 0.8;
+            color: $c;
+        }
+    }
 }

@@ -41,6 +41,14 @@
         padding: 120px 170px;
         width: 200%;
     }
+    @include detail_five {
+        padding: 100px 95px;
+        width: 100%;
+    }
+    @include detail_six {
+        padding: 100px 70px;
+        width: 100%;
+    }
 
     .title {
         @include font-style;
@@ -48,7 +56,11 @@
 
     .price {
         @include item_p;
-        font-size: 20px
+        font-size: 20px;
+
+        @include detail_six {
+            font-size: 15px;
+        }
     }
 
     .content {
@@ -56,11 +68,19 @@
         margin-top: 28px;
         margin-bottom: 12px;
         font-size: 18px;
+
+        @include detail_six {
+            font-size: 13px;
+        }
     }
 
     .type {
         font-size: 15px;
         color: $d;
+
+        @include detail_six {
+            font-size: 11px;
+        }
     }
 
     .more_product {
@@ -129,6 +149,7 @@
             @include box_border(1px, $a);
             background-color: $d;
             opacity: 0.8;
+            color: $c;
         }
     }
 
@@ -169,6 +190,10 @@
     p {
         font-size: 13px;
         line-height: 25px;
+
+        @include detail_six {
+            font-size: 11px;
+        }
     }
 
     .details {
@@ -176,6 +201,10 @@
             font-size: 13px;
             font-weight: 700;
             line-height: 30px;
+
+            @include detail_six {
+                font-size: 11px;
+            }
         }
 
         .txtBox {
@@ -229,12 +258,28 @@
                 &:hover {
                     border: 1px solid $a;
                 }
+
+                @include detail_five {
+                    width: 200px;
+                }
+
+                @include detail_six {
+                    width: 150px;
+                }
             }
 
             h4 {
                 width: 280px;
                 font-size: 16px;
                 margin-top: 20px;
+
+                @include detail_five {
+                    width: 200px;
+                }
+                
+                @include detail_six {
+                    width: 150px;
+                }
             }
 
             .item_c {
@@ -242,12 +287,29 @@
                 font-size: 14px;
                 text-align: center;
                 margin-top: -40px;
+                                
+                @include detail_five {
+                    width: 200px;
+                }
+                
+                @include detail_six {
+                    width: 150px;
+                    font-size: 11px;
+                }
             }
 
             .item_p {
                 width: 280px;
                 text-align: center;
                 margin-bottom: 50px;
+                                
+                @include detail_five {
+                    width: 200px;
+                }
+                
+                @include detail_six {
+                    width: 150px;
+                }
             }
         }
 
