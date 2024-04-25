@@ -182,20 +182,20 @@ const Store = () => {
           >
             <SwiperSlide className='dosan_store1'>
               <video muted autoPlay loop>
-                <source src="/video/Dosan1.mp4" type="video/mp4" />
+                <source src={process.env.PUBLIC_URL + "/video/Dosan1.mp4"} type="video/mp4" />
               </video>
             </SwiperSlide>
             <SwiperSlide className='dosan_store2'>
-                                                      <img src={process.env.PUBLIC_URL + '/img/Dosan2.jpg'} height='100%' />
+              <img src={process.env.PUBLIC_URL + '/img/Dosan2.jpg'} height='100%' />
             </SwiperSlide>
             <SwiperSlide className='dosan_store3'>
-                                                      <img src={process.env.PUBLIC_URL + '/img/Dosan3.jpg'} height='100%' />
+                <img src={process.env.PUBLIC_URL + '/img/Dosan3.jpg'} height='100%' />
             </SwiperSlide>
             <SwiperSlide className='dosan_store4'>
-                                                      <img src={process.env.PUBLIC_URL + '/img/Dosan4.jpg'} height='100%' />
+              <img src={process.env.PUBLIC_URL + '/img/Dosan4.jpg'} height='100%' />
             </SwiperSlide>
             <SwiperSlide className='dosan_store5'>
-                                                      <img src={process.env.PUBLIC_URL + '/img/Dosan5.jpg'} height='100%' />
+               <img src={process.env.PUBLIC_URL + '/img/Dosan5.jpg'} height='100%' />
             </SwiperSlide>
           </Swiper>
           <div className='store_info'>
