@@ -4,10 +4,14 @@
 .detailWrap {
     width: 100%;
     height: auto;
+
+
 }
 
 .detail_inner {
     margin-top: -150px;
+    width: 100%;
+    --bs-gutter-x: 0;
 }
 
 .product {
@@ -15,6 +19,10 @@
 
     @include detail_four {
         width: 100%;
+    }
+    @include detail_five {
+        width: 150%;
+        margin-top: 40px;
     }
 }
 
@@ -42,11 +50,11 @@
         width: 200%;
     }
     @include detail_five {
-        padding: 100px 95px;
+        padding: 100px 40px;
         width: 100%;
     }
     @include detail_six {
-        padding: 100px 70px;
+        padding: 100px 40px;
         width: 100%;
     }
 
@@ -69,6 +77,9 @@
         margin-bottom: 12px;
         font-size: 18px;
 
+        @include detail_five {
+            font-size: 14px;
+        }
         @include detail_six {
             font-size: 13px;
         }
@@ -78,7 +89,12 @@
         font-size: 15px;
         color: $d;
 
+        @include detail_five {
+            text-align: justify;
+            font-size: 11px;
+        }
         @include detail_six {
+            text-align: justify;
             font-size: 11px;
         }
     }
@@ -191,8 +207,14 @@
         font-size: 13px;
         line-height: 25px;
 
+        @include detail_five {
+            font-size: 11px;
+            text-align: justify;
+        }
+
         @include detail_six {
             font-size: 11px;
+            text-align: justify;
         }
     }
 
@@ -202,8 +224,13 @@
             font-weight: 700;
             line-height: 30px;
 
+            @include detail_five {
+                font-size: 11px;
+                text-align: justify;
+            }
             @include detail_six {
                 font-size: 11px;
+                text-align: justify;
             }
         }
 
@@ -238,6 +265,14 @@
         margin: 0 auto;
         padding: 200px 100px;
 
+        @include detail_five {
+            padding: 100px 50px;
+        }
+        @include detail_six {
+            padding: 100px 40px;
+        }
+    
+
         h4 {
             @include font-style;
             font-size: 30px;
@@ -260,11 +295,11 @@
                 }
 
                 @include detail_five {
-                    width: 200px;
+                    width: 270px;
                 }
 
                 @include detail_six {
-                    width: 150px;
+                    width: 250px;
                 }
             }
 
@@ -274,11 +309,11 @@
                 margin-top: 20px;
 
                 @include detail_five {
-                    width: 200px;
+                    width: 270px;
                 }
                 
                 @include detail_six {
-                    width: 150px;
+                    width: 250px;
                 }
             }
 
@@ -289,11 +324,11 @@
                 margin-top: -40px;
                                 
                 @include detail_five {
-                    width: 200px;
+                    width: 270px;
                 }
                 
                 @include detail_six {
-                    width: 150px;
+                    width: 250px;
                     font-size: 11px;
                 }
             }
@@ -304,11 +339,11 @@
                 margin-bottom: 50px;
                                 
                 @include detail_five {
-                    width: 200px;
+                    width: 270px;
                 }
                 
                 @include detail_six {
-                    width: 150px;
+                    width: 250px;
                 }
             }
         }

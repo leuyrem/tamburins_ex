@@ -7,6 +7,13 @@
     display: block;
     margin: 150px auto 300px;
 
+    @include detail_five {
+        padding: 0 40px;
+    }
+    @include detail_six {
+        padding: 0 40px;
+    }
+
     .nav {
         justify-content: space-around;
     }
@@ -16,20 +23,20 @@
 
         .nav-item {
             margin-right: 0;
+            margin-left: 0;
         }
 
         .nav-link {
             font-size: 13px;
-            border-color: transparent;
            
-            &:active {
-                border-bottom: 1px solid $a;
-            }
+            // &:active {
+            //     border-bottom: 1px solid $a;
+            // }
         
-            &:focus {
-                border-color: transparent;
-                border-bottom: 1px solid $a;
-            }
+            // &:focus {
+            //     border-color: transparent;
+            //     border-bottom: 1px solid $a;
+            // }
         }
     }
 

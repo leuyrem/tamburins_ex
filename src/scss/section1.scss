@@ -12,6 +12,23 @@
     margin-bottom: 25px;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+
+    @include section_four {
+        padding: 0 40px;
+    }
+    @include section_five {
+        padding: 0 40px;
+    }
+}
+
+.row {
+    @include section_four {
+        --bs-gutter-x: 0;
+    }
+    @include section_five {
+        --bs-gutter-x: 0;
+    }
 }
 
 .left {
@@ -32,8 +49,14 @@
         margin-bottom: -90px; 
     }
     @include section_four {
+        width: 100%;
         margin-bottom: -220px; 
     }
+    @include section_five {
+        width: 100%;
+        margin-bottom: -120px; 
+    }
+
 
     .graybox {
         height: 450px;
@@ -44,7 +67,13 @@
         position: relative;
 
         @include section_three {
-            height: 350px;
+            height: 450px;
+        }
+        @include section_four {
+            height: 300px;
+        }
+        @include section_five {
+            height: 300px;
         }
 
         &::after {
@@ -59,9 +88,12 @@
             background-size: contain;
 
             @include section_three {
-                top: 300px;
-                left: 40px;
+                top: 40px;
+                left: 150px;
                 width: 35%;
+            }
+            @include section_four {
+                display: none;
             }
         }
 
@@ -75,8 +107,16 @@
                 line-height: 70px;
             }
             @include section_three {
-                font-size: 2.1rem;
+                font-size: 2.5em;
                 line-height: 50px;  
+            }
+            @include section_four {
+                font-size: 2.3rem;
+                line-height: 40px;  
+            }
+            @include section_five {
+                font-size: 1.8rem;
+                line-height: 40px;  
             }
         }
 
@@ -91,7 +131,16 @@
                 margin-top: 80px;
             }
             @include section_three {
-                display: none
+                font-size: 1rem;
+                margin-top: 0px;
+            }
+            @include section_four {
+                font-size: 1rem;
+                margin-top: 15px;
+            }
+            @include section_five {
+                font-size: 0.9rem;
+                margin-top: 15px;
             }
         }
     }
@@ -128,7 +177,6 @@
                 left: 20px;
             }
         }
-
     }
 
     .smallBox2 {
@@ -198,6 +246,7 @@
         width: 100%;
         height: 400px;
         margin-left: 0px;
+        margin-top: 100px;
 
         video {
             height: 160%;
@@ -207,6 +256,34 @@
             left: -250px;
         }
     } 
+    @include section_four {
+        width: 100%;
+        height: 400px;
+        margin-left: 0px;
+        margin-top: -50px;
+
+        video {
+            height: 160%;
+            position: absolute;
+            background-size: cover;
+            top: -150px;
+            left: -400px;
+        }
+    }
+    @include section_five {
+        width: 100%;
+        height: 300px;
+        margin-left: 0px;
+        margin-top: -150px;
+
+        video {
+            height: 160%;
+            position: absolute;
+            background-size: cover;
+            top: -150px;
+            left: -500px;
+        }
+    }
 }
 
 //part2 텍스트
@@ -306,6 +383,68 @@
             &::after {
                 bottom: 48%;
                 left: 32%;
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+    @include section_four {
+        font-size: 1.5rem;
+        line-height: 55px;
+        padding: 100px 40px;
+        height: 400px;
+        position: relative;
+        margin-bottom: 50px;
+
+        &::before {
+            top: 22%;
+            left: 38%;
+            width: 50px;
+            height: 50px;
+        }
+    
+        &::after {
+            bottom: 50%;
+            right: 20%;
+            width: 50px;
+            height: 50px;
+        }
+    
+        .mid2 {
+            &::after {
+                bottom: 25%;
+                left: 35%;
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+    @include section_five {
+        font-size: 1.2rem;
+        line-height: 55px;
+        padding: 100px 40px;
+        height: 400px;
+        position: relative;
+        margin-bottom: 80px;
+
+        &::before {
+            top: 22%;
+            left: 38%;
+            width: 50px;
+            height: 50px;
+        }
+    
+        &::after {
+            bottom: 40%;
+            right: 20%;
+            width: 50px;
+            height: 50px;
+        }
+    
+        .mid2 {
+            &::after {
+                bottom: 25%;
+                left: 20%;
                 width: 50px;
                 height: 50px;
             }

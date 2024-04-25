@@ -30,7 +30,7 @@ $one_video: 1850px;
 $one_a: 1460px;
 $one_b: 1150px;
 $one_c: 500px;
-$one_e: 499px;
+$one_d: 375px;
 
 @mixin section_one {
     @media (min-width: $one_a){
@@ -51,7 +51,13 @@ $one_e: 499px;
 }
 
 @mixin section_four {
-    @media (max-width: $one_c){
+    @media (min-width: $one_d) and (max-width: $one_c){
+        @content;
+    }
+}
+
+@mixin section_five {
+    @media (max-width: $one_d){
         @content;
     }
 }

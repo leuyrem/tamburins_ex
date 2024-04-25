@@ -30,7 +30,9 @@ function App() {
         <Navbar key={expand} expand={expand} className="navbar">
           <Container fluid>
           <div className='headerWrap'>
-            <Navbar.Brand href="/">
+            <Navbar.Brand onClick={()=> {
+              navigate('/')
+            }}>
             <svg xmlns="http://www.w3.org/2000/svg" width="180" viewBox="0 0 210 31" fill="black">
                 <g clip-path="url(#clip0_5924_5517)">
                   <path d="M23.5946 0.688843H0.958984V6.11548H1.10101C2.99471 4.90233 5.24348 4.11526 7.52775 4.11526H9.77652V19.5401C9.77652 20.6467 9.67 21.7888 9.56348 22.6114C9.27646 23.434 8.66989 24.5406 8.31482 25.1117V25.3247H16.2417V25.1117C15.8837 24.5406 15.2771 23.434 14.9931 22.6114C14.8865 21.7888 14.78 20.6467 14.78 19.5401V4.11526H17.0288C19.3131 4.11526 21.5618 4.89937 23.4555 6.11548H23.5976V0.688843H23.5946Z"></path>

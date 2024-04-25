@@ -41,11 +41,24 @@
     @include section_video3 {
         padding: 80px 100px;
     }
+    @include section_four {
+        padding: 80px 40px;
+    }
+    @include section_five {
+        padding: 80px 40px;
+    }
 }
 
 .slick-slide {
     padding: 0 20px;
     cursor: grab;
+
+    @include section_four {
+    padding: 0px;
+    }
+    @include section_five {
+        padding: 0px;
+    }
 }
 
 .slick-list {
@@ -87,6 +100,12 @@
     @include section_video3 {
         display: none;
     }
+    @include section_four {
+        display: none;
+    }
+    @include section_five {
+        display: none;
+    }
 }
 
 .slick-next::after {
@@ -101,6 +120,12 @@
     height: 40px;
 
     @include section_video3 {
+        display: none;
+    }
+    @include section_four {
+        display: none;
+    }
+    @include section_five {
         display: none;
     }
 }

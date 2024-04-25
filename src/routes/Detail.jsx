@@ -52,8 +52,8 @@ const Detail = (props) => {
       <div className='detailWrap'>
         <Row className="detail_inner">
           <Col md={6} className='product'>
-            <img src={selproduct.imgUrl} width="100%" />
-            <img src={selproduct.imgUrl_sub} width="100%" />
+            <img src={process.env.PUBLIC_URL + selproduct.imgUrl} width="100%" />
+            <img src={process.env.PUBLIC_URL + selproduct.imgUrl_sub} width="100%" />
           </Col>
 
           <Col md={6} className='buy'>

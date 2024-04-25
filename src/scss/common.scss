@@ -26,6 +26,10 @@
   position: sticky;
   top: 20px;
   z-index: 100;
+
+  @include detail_five {
+    padding: 0 30px;
+}
 }
 
 .headerWrap {
@@ -42,15 +46,13 @@
 .navbar-brand {
   @include detail_five {
     svg {
-      width: 140px;
+      width: 170px;
     }
   }
 
   @include detail_six {
     svg {
-      width: 100px;
-      margin-left: 10px;
-      margin-right: -20px;
+      width: 150px;
     }
   }
 }
@@ -144,6 +146,14 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include detail_five {
+      padding: 50px 40px;
+    }
+  
+    @include detail_six {
+      padding: 50px 40px;
+    }
   }
 
   .f_logo {
@@ -214,6 +224,24 @@
     span {
       text-decoration: underline;
     }
+
+    @include detail_five {
+      padding: 15px 40px;
+      text-align: justify;
+
+      p {
+        margin: 15px 0;
+      }
+    }
+  
+    @include detail_six {
+      padding: 15px 40px;
+      text-align: justify;
+
+      p {
+        margin: 15px 0;
+      }
+    }
   }
 
   .copy2 {
@@ -225,6 +253,14 @@
 
     p {
       margin: 0;
+    }
+
+    @include detail_five {
+      padding: 15px 40px;
+    }
+  
+    @include detail_six {
+      padding: 15px 40px;
     }
   }
 }

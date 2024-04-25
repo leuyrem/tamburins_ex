@@ -21,7 +21,7 @@ const Section1 = () => {
         </Col>
         <Col md={6} className='right'>
           <video muted autoPlay loop>
-            <source src="/video/FRoom.mp4" type="video/mp4" />
+            <source src={process.env.PUBLIC_URL + "/video/FRoom.mp4"} type="video/mp4" />
           </video>
         </Col>
       </Row>
